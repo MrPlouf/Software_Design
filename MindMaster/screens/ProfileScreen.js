@@ -1,39 +1,38 @@
 // screens/ProfileScreen.js
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ActivityIndicator, Alert, Image, ScrollView } from 'react-native'; // Added ScrollView
+import { View, Text, StyleSheet, TouchableOpacity, ActivityIndicator, Alert, Image, ScrollView } from 'react-native';
 import { useNavigation, useIsFocused } from '@react-navigation/native';
 import { auth, db } from '../firebase';
 
 // --- Image Mapping ---
-const baseBodyImage = require('../assets/images/characters/base_body.png'); // Ensure this path is correct
+// Path to your base body sprite - ENSURE THIS FILE EXISTS AND PATH IS CORRECT
+const baseBodyImage = require('../assets/images/characters/base_body.png'); 
 
-const headImageSources = {
-  'default_head': require('../assets/images/characters/heads/default_head.png'),
-  'cat_ears': require('../assets/images/characters/heads/cat_ears.png'),
-  'cool_hat': require('../assets/images/characters/heads/cool_hat.png'),
-  //'frog_head': require('../assets/images/characters/heads/frog_head.png'),
-};
-
-const weaponImageSources = {
-  'default_sword': require('../assets/images/characters/weapons/default_sword.png'),
-  'laser_gun': require('../assets/images/characters/weapons/laser_gun.png'),
-  'magic_staff': require('../assets/images/characters/weapons/magic_staff.png'),
-  //'shield': require('../assets/images/characters/weapons/shield.png'),
+// Paths to your selectable OVERLAY character looks/classes
+// These images will be layered ON TOP of the baseBodyImage.
+// Ensure they have transparent backgrounds where appropriate.
+// ENSURE THESE FILES EXIST AND PATHS ARE CORRECT
+const characterOverlaySources = {
+  'default_look': require('../assets/images/characters/overlays/default_look.png'), 
+  'male_knight_overlay': require('../assets/images/characters/overlays/male_knight_overlay.png'),
+  'female_mage_overlay': require('../assets/images/characters/overlays/female_mage_overlay.png'),
+  'male_archer_overlay': require('../assets/images/characters/overlays/male_archer_overlay.png'),
+  // Add more overlay options as needed, e.g.:
+  // 'female_warrior_overlay': require('../assets/images/characters/overlays/female_warrior_overlay.png'),
 };
 // --- End Image Mapping ---
 
 
-const ItemBox = ({ imageKey, type, selected, onPress }) => {
-  let source;
-  if (type === 'head' && headImageSources[imageKey]) {
-    source = headImageSources[imageKey];
-  } else if (type === 'weapon' && weaponImageSources[imageKey]) {
-    source = weaponImageSources[imageKey];
-  } else {
+const LookSelectionBox = ({ lookKey, selected, onPress }) => {
+  const source = characterOverlaySources[lookKey]; 
+
+  if (!source) { 
     return (
-        <TouchableOpacity onPress={onPress} style={[styles.itemBox, selected && styles.selectedItemBox]}>
-            <Text style={{fontSize:10, color: selected ? '#fff' : '#333', textAlign: 'center'}}>{imageKey.replace(/_/g, ' ')}</Text>
-        </TouchableOpacity>
+      <TouchableOpacity onPress={onPress} style={[styles.itemBox, selected && styles.selectedItemBox]}>
+        <Text style={{fontSize:10, color: selected ? '#fff' : '#333', textAlign: 'center'}}>
+          {lookKey.replace(/_/g, ' ')}
+        </Text>
+      </TouchableOpacity>
     );
   }
 
@@ -54,11 +53,11 @@ const ProfileScreen = () => {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
 
-  const headItemKeys = ['default_head', 'cat_ears', 'cool_hat', 'frog_head'];
-  const weaponItemKeys = ['default_sword', 'laser_gun', 'magic_staff', 'shield'];
+  // Keys for the selectable overlay looks, matching keys in characterOverlaySources
+  // Make sure these keys exactly match the keys in your characterOverlaySources object above
+  const characterLookKeys = ['default_look', 'male_knight_overlay', 'female_mage_overlay', 'male_archer_overlay']; 
 
-  const [selectedHeadKey, setSelectedHeadKey] = useState('default_head');
-  const [selectedWeaponKey, setSelectedWeaponKey] = useState('default_sword');
+  const [selectedLookKey, setSelectedLookKey] = useState('default_look'); 
 
   useEffect(() => {
     if (currentUser && isFocused) {
@@ -68,49 +67,55 @@ const ProfileScreen = () => {
         if (doc.exists) {
           const data = doc.data();
           setUserData(data);
-          setSelectedHeadKey(data.characterLook?.head || 'default_head');
-          setSelectedWeaponKey(data.characterLook?.weapon || 'default_sword');
+          setSelectedLookKey(data.characterLook?.overlay || 'default_look');
         } else {
-            // Handle case where user doc might not exist yet, though setup should create it.
             console.warn("ProfileScreen: User document not found for UID:", currentUser.uid);
+            // If doc doesn't exist, user might need to go through InitialSetup again
+            // or InitialSetup needs to create it reliably.
         }
         setLoading(false);
       }, err => {
         console.error("Error fetching user data for ProfileScreen:", err);
+        Alert.alert("Error", "Could not load profile data.");
         setLoading(false);
       });
       return () => unsubscribe();
     } else if (!currentUser) {
-        navigation.replace('Auth'); // Should be caught by AuthLoading anyway
+        // This should ideally be caught by AuthLoadingScreen
+        console.warn("ProfileScreen: No current user, redirecting to Auth.");
+        navigation.replace('Auth');
     }
   }, [currentUser, navigation, isFocused]);
 
   const handleSaveChanges = async () => {
-    if (!currentUser) return;
+    if (!currentUser) {
+        Alert.alert("Error", "You are not logged in.");
+        return;
+    }
     setSaving(true);
     try {
-      await db.collection('users').doc(currentUser.uid).update({
+      await db.collection('users').doc(currentUser.uid).set({ // Use set with merge to create/update
         characterLook: {
-          head: selectedHeadKey,
-          weapon: selectedWeaponKey,
+          overlay: selectedLookKey,
         }
-      });
-      Alert.alert('Success', 'Look updated!');
+      }, { merge: true }); 
+
+      Alert.alert('Success', 'Character look updated!');
     } catch (error) {
+      console.error("Error saving character look: ", error);
       Alert.alert('Error', 'Could not update look: ' + error.message);
     }
     setSaving(false);
   };
 
-  if (loading) {
+  if (loading && !userData) { // Show loading only if data hasn't been fetched at all yet
     return <View style={[styles.container, styles.centeredLoading]}><ActivityIndicator size="large" color="#FFFFFF" /></View>;
   }
 
-  const currentHeadImage = headImageSources[selectedHeadKey] || headImageSources['default_head'];
-  const currentWeaponImage = weaponImageSources[selectedWeaponKey] || weaponImageSources['default_sword'];
+  const currentOverlayImage = characterOverlaySources[selectedLookKey] || characterOverlaySources['default_look'];
 
   return (
-    <ScrollView style={styles.scrollView}>
+    <ScrollView style={styles.scrollView} contentContainerStyle={styles.scrollViewContent}>
         <View style={styles.container}>
             <View style={styles.header}>
                 <TouchableOpacity onPress={() => navigation.goBack()}>
@@ -123,37 +128,21 @@ const ProfileScreen = () => {
             <View style={styles.characterDisplay}>
                 <View style={styles.characterAssemblyArea}>
                     <Image source={baseBodyImage} style={styles.characterBaseBody} resizeMode="contain"/>
-                    {currentHeadImage && <Image source={currentHeadImage} style={styles.characterHeadOverlay} resizeMode="contain"/>}
-                    {currentWeaponImage && <Image source={currentWeaponImage} style={styles.characterWeaponOverlay} resizeMode="contain"/>}
+                    {currentOverlayImage && <Image source={currentOverlayImage} style={styles.characterOverlay} resizeMode="contain"/>}
                 </View>
                 <Text style={styles.characterNameText}>{userData?.nickname || 'Player'}</Text>
             </View>
 
-            <Text style={styles.sectionTitle}>Change your look</Text>
+            <Text style={styles.sectionTitle}>Change Character Look</Text>
             
-            <Text style={styles.subSectionTitle}>Head</Text>
             <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.itemsScrollContainer}>
-                {headItemKeys.map(itemKey => (
-                <ItemBox 
-                    key={`head-${itemKey}`}
-                    imageKey={itemKey} 
-                    type="head"
-                    selected={selectedHeadKey === itemKey} 
-                    onPress={() => setSelectedHeadKey(itemKey)} 
-                />
-                ))}
-            </ScrollView>
-
-            <Text style={styles.subSectionTitle}>Weapon</Text>
-            <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.itemsScrollContainer}>
-                {weaponItemKeys.map(itemKey => (
-                <ItemBox 
-                    key={`weapon-${itemKey}`}
-                    imageKey={itemKey}
-                    type="weapon"
-                    selected={selectedWeaponKey === itemKey} 
-                    onPress={() => setSelectedWeaponKey(itemKey)} 
-                />
+                {characterLookKeys.map(itemKey => (
+                  <LookSelectionBox 
+                    key={`look-${itemKey}`}
+                    lookKey={itemKey} 
+                    selected={selectedLookKey === itemKey} 
+                    onPress={() => setSelectedLookKey(itemKey)} 
+                  />
                 ))}
             </ScrollView>
 
@@ -181,24 +170,26 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#81A9FF',
   },
-  container: {
-    flexGrow: 1, // Changed from flex:1 for ScrollView content
-    paddingHorizontal: 20,
-    paddingBottom: 30, // Add padding at the bottom
-    // backgroundColor: '#81A9FF', // Set on scrollView
+  scrollViewContent: { // Added for ScrollView content
+    flexGrow: 1,
   },
-  centeredLoading: { // For the main loading indicator
-    flex:1,
+  container: {
+    flexGrow: 1,
+    paddingHorizontal: 20,
+    paddingBottom: 30, 
+  },
+  centeredLoading: {
+    flex:1, // Takes full screen
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#81A9FF',
+    backgroundColor: '#81A9FF', // Match screen bg
   },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 20, 
-    marginTop: 50, // For status bar space
+    marginTop: 50, // Space for status bar
   },
   backButtonText: {
       color: '#FFFFFF',
@@ -215,41 +206,27 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 25, 
   },
-  characterAssemblyArea: { // This View will contain all character parts
-    width: 180, // Adjust width to fit your sprites well
-    height: 220, // Adjust height
-    // backgroundColor: 'rgba(0,0,0,0.1)', // Optional: for debugging layout
-    position: 'relative', // Crucial for absolute positioning of children
+  characterAssemblyArea: { 
+    width: 180, 
+    height: 220, 
+    position: 'relative', 
     justifyContent: 'center',
     alignItems: 'center',
+    // backgroundColor: 'rgba(0,0,0,0.1)', // For debugging layout of assembly area
   },
-  characterBaseBody: {
-    width: '100%', // Base body might fill the area
+  characterBaseBody: { 
+    width: '100%', 
     height: '100%',
-    position: 'absolute', // All parts absolute to stack
+    position: 'absolute', 
   },
-  characterHeadOverlay: {
-    width: '70%', // Example: Head might be 70% of the container width
-    height: '50%', // Example: And 50% of height
-    position: 'absolute',
-    top: '5%', // Fine-tune this percentage or use absolute pixels
-    // left: '15%', // Fine-tune: (100 - 70) / 2 for centering head
-    alignSelf: 'center', // Another way to center if width is less than parent
-    zIndex: 2, // Ensure head is above body
-  },
-  characterWeaponOverlay: {
-    width: '60%',
-    height: '60%',
-    position: 'absolute',
-    // Example positioning: adjust based on your sprites
-    bottom: '10%', 
-    right: '0%', // Or left, depending on how character holds it
-    zIndex: 3, // Weapon might be above head or body
+  characterOverlay: { 
+    width: '100%', 
+    height: '100%',
+    position: 'absolute', 
+    zIndex: 1, 
   },
   characterNameText: {
-      // position: 'absolute', // Not needed if characterAssemblyArea handles centering
-      // bottom: -25, 
-      marginTop: 5, // Space between character box and name
+      marginTop: 10, 
       color: '#FFFFFF',
       fontWeight: 'bold',
       fontSize: 18,
@@ -262,44 +239,40 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     textAlign: 'center'
   },
-  subSectionTitle: {
-    fontSize: 16,
-    color: '#F0F0F0',
-    marginBottom: 10,
-    marginLeft: 5, // Align with items container potentially
-  },
-  itemsScrollContainer: {
+  itemsScrollContainer: { // For the horizontal ScrollView of looks
     paddingVertical: 10,
-    paddingHorizontal: 5, // Add padding if items touch edges
-    marginBottom: 20,
+    paddingHorizontal: 5, // If boxes touch edge
+    marginBottom: 25,
+    alignItems: 'center', // Center items if they don't fill width
   },
-  itemBox: {
-    width: 75, 
-    height: 75,
+  itemBox: { 
+    width: 80, 
+    height: 100, 
     backgroundColor: 'rgba(255,255,255,0.3)',
-    borderRadius: 10, // Slightly more rounded
+    borderRadius: 10,
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.7)', // Lighter border
+    borderColor: 'rgba(255,255,255,0.7)',
     justifyContent: 'center',
     alignItems: 'center',
     marginHorizontal: 6, 
-    overflow: 'hidden', // Ensure image stays within rounded corners
+    overflow: 'hidden',
   },
   selectedItemBox: {
     borderColor: '#FFD700', 
     backgroundColor: '#446BCF',
-    borderWidth: 2.5, // More prominent selection
+    borderWidth: 2.5,
   },
-  itemImage: {
-      width: '85%', 
-      height: '85%',
+  itemImage: { 
+      width: '90%', 
+      height: '90%',
   },
   actionButton: {
     paddingVertical: 15, 
-    borderRadius: 12, // Consistent rounding
+    borderRadius: 12,
     alignItems: 'center',
     marginTop: 10,
-    width: '100%',
+    width: '100%', // Make buttons full width of their container
+    alignSelf: 'center', // Center button if container is wider
     elevation: 2,
   },
   saveButton: {
