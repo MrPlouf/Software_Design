@@ -2,6 +2,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import AppText from '../components/AppText';
 
 const TutorialScreen = () => {
   const navigation = useNavigation();

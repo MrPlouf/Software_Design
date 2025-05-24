@@ -1,0 +1,50 @@
+{
+  "themeName": "English",
+  "questions": [
+    {
+      "level": 1,
+      "difficulty": "Easy",
+      "questionText": "What is the plural of \"child\" ?",
+      "choices": [
+        { "letter": "A", "text": "Childs", "isCorrect": false },
+        { "letter": "B", "text": "Childes", "isCorrect": false },
+        { "letter": "C", "text": "Children", "isCorrect": true },
+        { "letter": "D", "text": "Childer", "isCorrect": false }
+      ]
+    },
+    {
+      "level": 1,
+      "difficulty": "Easy",
+      "questionText": "What is the past tense of \"go\" ?",
+      "choices": [
+        { "letter": "A", "text": "Goed", "isCorrect": false },
+        { "letter": "B", "text": "Went", "isCorrect": true },
+        { "letter": "C", "text": "Going", "isCorrect": false },
+        { "letter": "D", "text": "Go", "isCorrect": false }
+      ]
+    },
+
+    {
+      "level": 2,
+      "difficulty": "Easy",
+      "questionText": "Which animal says 'moo'?",
+      "choices": [
+        { "letter": "A", "text": "Dog", "isCorrect": false },
+        { "letter": "B", "text": "Cat", "isCorrect": false },
+        { "letter": "C", "text": "Cow", "isCorrect": true },
+        { "letter": "D", "text": "Duck", "isCorrect": false }
+      ]
+    },
+    {
+      "level": 1,
+      "difficulty": "Hard",
+      "questionText": "What is the past participle of \"write\" ?",
+      "choices": [
+        { "letter": "A", "text": "Wrote", "isCorrect": false },
+        { "letter": "B", "text": "Written", "isCorrect": true },
+        { "letter": "C", "text": "Writing", "isCorrect": false },
+        { "letter": "D", "text": "Write", "isCorrect": false }
+      ]
+    }
+  ]
+}

@@ -1,17 +1,15 @@
 // screens/InitialSetupScreen.js
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, StyleSheet, Alert, TouchableOpacity, ActivityIndicator, ScrollView } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, CommonActions } from '@react-navigation/native';
 import { auth, db } from '../firebase';
 import firebase from 'firebase/compat/app';
+import AppText from '../components/AppText';
 
-// Example school materials - these could come from a config or Firestore
-const allSchoolMaterials = [
-  "Mathematics", "Science", "History", "Geography", 
-  "Literature", "Physics", "Chemistry", "Biology", 
-  "Art", "Music", "Computer Science", "Economics"
-];
-const difficulties = ['Easy', 'Medium', 'Hard', 'Expert'];
+// This list should contain all themes you want users to be able to pick from.
+// It should align with themes defined in QuestionService.js and your JSON files.
+export const allAvailableThemes = ["English", "Geography", "History", "Mathematics", "Physics", "Science"]; 
+const difficulties = ['Easy', 'Hard']; 
 
 const MaterialItem = ({ name, onPress, isSelected }) => (
   <TouchableOpacity 
@@ -24,8 +22,8 @@ const MaterialItem = ({ name, onPress, isSelected }) => (
 
 const InitialSetupScreen = () => {
   const [yourName, setYourName] = useState('');
-  const [selectedDifficulty, setSelectedDifficulty] = useState('Medium');
-  const [selectedMaterials, setSelectedMaterials] = useState([]); // Array to hold selected subjects
+  const [selectedDifficulty, setSelectedDifficulty] = useState('Easy');
+  const [selectedThemes, setSelectedThemes] = useState([]); // User's chosen themes
   const [loading, setLoading] = useState(false);
   const navigation = useNavigation();
   const currentUser = auth.currentUser;
@@ -35,130 +33,100 @@ const InitialSetupScreen = () => {
       console.warn("InitialSetupScreen: No current user, redirecting to Auth.");
       navigation.replace('Auth');
     } else {
-      // Optional: Pre-fill if data exists (e.g., user re-enters setup)
+      // Pre-fill logic (optional, good for robustness if user somehow re-enters)
       db.collection('users').doc(currentUser.uid).get().then(doc => {
-        if (doc.exists && doc.data().nickname) {
-          setYourName(doc.data().nickname);
-          setSelectedDifficulty(doc.data().difficulty ? dificuldades.find(d => d.toLowerCase() === doc.data().difficulty) || 'Medium' : 'Medium');
-          setSelectedMaterials(doc.data().learningSubjects || []);
+        if (doc.exists) {
+          const data = doc.data();
+          if (data.nickname) setYourName(data.nickname);
+          const savedDifficulty = data.difficulty && difficulties.find(d => d.toLowerCase() === data.difficulty.toLowerCase());
+          setSelectedDifficulty(savedDifficulty || 'Easy');
+          if (data.learningSubjects && Array.isArray(data.learningSubjects)) {
+            setSelectedThemes(data.learningSubjects);
+          }
         }
-      }).catch(err => console.log("Error fetching pre-fill data for setup:", err));
+      }).catch(err => console.log("Error fetching pre-fill data for InitialSetup:", err));
     }
   }, [currentUser, navigation]);
 
-  const toggleMaterialSelection = (material) => {
-    setSelectedMaterials(prevSelected => {
-      if (prevSelected.includes(material)) {
-        return prevSelected.filter(item => item !== material);
-      } else {
-        if (prevSelected.length < 4) { // Limit to 4 selections
-          return [...prevSelected, material];
-        }
-        Alert.alert("Selection Limit", "You can select up to 4 school materials.");
-        return prevSelected;
-      }
-    });
+  const toggleThemeSelection = (themeName) => {
+    setSelectedThemes(prev => 
+      prev.includes(themeName) 
+        ? prev.filter(t => t !== themeName) 
+        : [...prev, themeName]
+    );
   };
 
   const handleCompleteSetup = async () => {
-    if (!yourName.trim()) {
-      Alert.alert('Error', 'Please enter your name.');
-      return;
-    }
-    if (selectedMaterials.length === 0) {
-      Alert.alert('Error', 'Please select at least one school material to learn.');
-      return;
-    }
-    if (selectedMaterials.length > 4) { // Should be prevented by UI but good to check
-        Alert.alert('Error', 'You can select a maximum of 4 school materials.');
-        return;
-    }
-    if (!currentUser) {
-      Alert.alert('Error', 'No user logged in. Please restart the app.');
-      setLoading(false);
-      navigation.replace('Auth');
-      return;
-    }
+    if (!yourName.trim()) { Alert.alert('Error', 'Please enter your name.'); return; }
+    if (selectedThemes.length === 0) { Alert.alert('Error', 'Please select at least one Theme to learn.'); return; }
+    if (!currentUser) { Alert.alert('Error', 'No user logged in.'); navigation.replace('Auth'); return; }
 
     setLoading(true);
     try {
+      const initialLevelsByTheme = {};
+      selectedThemes.forEach(theme => {
+        initialLevelsByTheme[theme] = 0; // Highest completed level for this theme is 0 (so level 1 is next)
+      });
+
       await db.collection('users').doc(currentUser.uid).set({
-        email: currentUser.email, // Make sure email is preserved
+        email: currentUser.email, // Preserve email from auth
         nickname: yourName,
-        difficulty: selectedDifficulty.toLowerCase(),
-        learningSubjects: selectedMaterials, // Save selected materials
-        language: 'English', // Default or can be added as an option
-        initialSetupComplete: true, // Crucial: set this to true
-        characterLook: { head: 'default_head', weapon: 'default_weapon' },
-        lives: 3,
-        progress: { highestLevelCompleted: 0, completedLevels: {} },
+        difficulty: selectedDifficulty, // 'Easy' or 'Hard'
+        learningSubjects: selectedThemes, // Array of chosen theme names
+        language: 'English', // Default, can be an option later
+        initialSetupComplete: true,
+        characterLook: { overlay: 'default_look' }, // Default character
+        lives: 3, 
+        xp: 0, 
+        currentLevelByTheme: initialLevelsByTheme, // Key for tracking progress
         createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-      }, { merge: true }); // merge: true to update existing doc or create if not present
+      }, { merge: true });
 
       console.log("InitialSetupScreen: Setup complete. Navigating to MainApp.");
-      navigation.replace('MainApp'); // Navigate to the main application stack
+      navigation.dispatch(CommonActions.reset({ index: 0, routes: [{ name: 'MainApp' }] }));
     } catch (error) {
-      console.error("Error completing setup: ", error);
+      console.error("InitialSetupScreen: Error completing setup: ", error);
       Alert.alert('Error', 'Could not save your settings: ' + error.message);
     }
     setLoading(false);
   };
 
-  if (!currentUser) { // Render loading or nothing if current user is briefly null
-    return <View style={styles.container}><ActivityIndicator size="large" color="#FFFFFF" /></View>;
+  if (!currentUser && !loading) { 
+    return <View style={styles.centeredLoading}><ActivityIndicator size="large" color="#FFFFFF" /></View>;
   }
 
   return (
     <ScrollView contentContainerStyle={styles.scrollContainer}>
       <View style={styles.container}>
         <Text style={styles.mainTitle}>Mind Master</Text>
-        <Text style={styles.welcomeText}>
-          Hello Traveler: Welcome to the world of MindMaster, your goal? Learn your way through the world and become the Mind Master!
-        </Text>
-        
+        <Text style={styles.welcomeText}>Personalize your learning journey.</Text>
         <Text style={styles.label}>Your Name:</Text>
-        <TextInput
-          style={styles.input}
-          placeholderTextColor="#A9A9A9"
-          value={yourName}
-          onChangeText={setYourName}
-        />
-
-        <Text style={styles.label}>Choose up to 4 School Materials to learn:</Text>
-        <View style={styles.materialsContainer}>
-          {allSchoolMaterials.map(material => (
-            <MaterialItem 
-              key={material}
-              name={material}
-              isSelected={selectedMaterials.includes(material)}
-              onPress={() => toggleMaterialSelection(material)}
-            />
-          ))}
-        </View>
-        <Text style={styles.selectionCountText}>Selected: {selectedMaterials.length}/4</Text>
-
-
-        <Text style={styles.label}>Chosen difficulty:</Text>
+        <TextInput style={styles.input} placeholder="Your game name" value={yourName} onChangeText={setYourName} />
+        
+        <Text style={styles.label}>Choose Themes to learn:</Text>
+        <ScrollView horizontal contentContainerStyle={styles.materialsHorizontalScroll} style={styles.materialsWrapper}>
+            <View style={styles.materialsContainer}>
+            {allAvailableThemes.map(theme => (
+                <MaterialItem 
+                    key={theme} 
+                    name={theme} 
+                    isSelected={selectedThemes.includes(theme)} 
+                    onPress={() => toggleThemeSelection(theme)} 
+                />
+            ))}
+            </View>
+        </ScrollView>
+        
+        <Text style={styles.label}>Choose your difficulty:</Text>
         <View style={styles.difficultyContainer}>
-          {difficulties.map((diff) => (
-            <TouchableOpacity
-              key={diff}
-              style={[
-                styles.difficultyBox,
-                selectedDifficulty === diff && styles.selectedDifficultyBox,
-              ]}
-              onPress={() => setSelectedDifficulty(diff)}
-            >
-              <Text style={[
-                  styles.difficultyBoxText,
-                  selectedDifficulty === diff && styles.selectedDifficultyBoxText
-              ]}>{diff}</Text>
+          {difficulties.map(d => (
+            <TouchableOpacity key={d} style={[styles.difficultyBox, selectedDifficulty === d && styles.selectedDifficultyBox]} onPress={() => setSelectedDifficulty(d)}>
+              <Text style={[styles.difficultyBoxText, selectedDifficulty === d && styles.selectedDifficultyBoxText]}>{d}</Text>
             </TouchableOpacity>
           ))}
         </View>
-
         <TouchableOpacity style={styles.button} onPress={handleCompleteSetup} disabled={loading}>
-          {loading ? <ActivityIndicator color="#FFFFFF" /> : <Text style={styles.buttonText}>Let's Go!</Text>}
+          {loading ? <ActivityIndicator color="#FFFFFF" /> : <Text style={styles.buttonText}>Start Learning!</Text>}
         </TouchableOpacity>
       </View>
     </ScrollView>
@@ -166,134 +134,28 @@ const InitialSetupScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  scrollContainer: {
-    flexGrow: 1,
-    backgroundColor: '#81A9FF',
-  },
-  container: {
-    flex: 1, // Takes available space in ScrollView
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
-    // backgroundColor: '#81A9FF', // Moved to scrollContainer
-  },
-  mainTitle: {
-    fontSize: 36,
-    fontWeight: 'bold',
-    color: '#FFFFFF',
-    marginBottom: 15,
-    textAlign: 'center',
-    fontFamily: 'Jockey One',
-  },
-  welcomeText: {
-    fontSize: 16,
-    color: '#F0F0F0',
-    textAlign: 'center',
-    marginBottom: 20,
-    paddingHorizontal: 10,
-    lineHeight: 22,
-  },
-  label: {
-    fontSize: 18,
-    color: '#FFFFFF',
-    alignSelf: 'flex-start',
-    marginLeft: '5%',
-    marginBottom: 8,
-    fontWeight: '600',
-  },
-  input: {
-    width: '90%',
-    backgroundColor: '#FFFFFF',
-    paddingHorizontal: 20,
-    paddingVertical: 12, // Slightly less padding
-    borderRadius: 10, 
-    marginBottom: 15, // Reduced margin
-    fontSize: 16,
-    color: '#333',
-  },
-  materialsContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'flex-start', // Align items to the start
-    width: '90%',
-    marginBottom: 5,
-    maxHeight: 200, // Added maxHeight for scrollability within the main scroll
-    backgroundColor: 'rgba(255,255,255,0.1)',
-    padding: 5,
-    borderRadius: 5,
-  },
-  materialItem: {
-    backgroundColor: '#A8C0FF',
-    paddingVertical: 8,
-    paddingHorizontal: 12,
-    borderRadius: 20,
-    margin: 4,
-    borderWidth: 1,
-    borderColor: '#FFFFFF',
-  },
-  selectedMaterialItem: {
-    backgroundColor: '#446BCF',
-    borderColor: '#FFD700',
-  },
-  materialText: {
-    color: '#333', // Darker text for better readability on light blue
-    fontSize: 12,
-  },
-  selectedMaterialText: {
-    color: '#FFFFFF',
-    fontWeight: 'bold',
-  },
-  selectionCountText: {
-    width: '90%',
-    textAlign: 'right',
-    color: '#FFFFFF',
-    fontSize: 12,
-    marginBottom: 15,
-  },
-  difficultyContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    width: '90%',
-    marginBottom: 25, // Reduced margin
-  },
-  difficultyBox: {
-    // width: '22%', // For 4 square boxes
-    flex: 1, // Make them take equal space
-    marginHorizontal: 4,
-    paddingVertical: 12,
-    backgroundColor: '#A8C0FF', 
-    borderRadius: 8,
-    borderWidth: 2,
-    borderColor: '#FFFFFF',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  selectedDifficultyBox: {
-    backgroundColor: '#446BCF', 
-    borderColor: '#FFD700',
-  },
-  difficultyBoxText: {
-    color: '#333',
-    fontSize: 12, // Smaller text for difficulty
-    fontWeight: 'bold',
-  },
-  selectedDifficultyBoxText: {
-    color: '#FFFFFF',
-  },
-  button: {
-    backgroundColor: '#446BCF',
-    paddingVertical: 15, // Reduced padding
-    borderRadius: 25,
-    width: '90%',
-    alignItems: 'center',
-    marginTop: 10, // Reduced margin
-    elevation: 3,
-  },
-  buttonText: {
-    color: '#FFFFFF',
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
+  scrollContainer: { flexGrow: 1, backgroundColor: '#81A9FF' },
+  container: { flex: 1, justifyContent: 'center', alignItems: 'center', paddingHorizontal: 20, paddingVertical: 30 },
+  centeredLoading: { flex:1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#81A9FF' },
+  mainTitle: { fontSize: 36, fontWeight: 'bold', color: '#FFFFFF', marginBottom: 15, textAlign: 'center', fontFamily: 'Jockey One' },
+  welcomeText: { fontSize: 16, color: '#F0F0F0', textAlign: 'center', marginBottom: 20, paddingHorizontal: 10, lineHeight: 22 },
+  label: { fontSize: 18, color: '#FFFFFF', alignSelf: 'flex-start', width: '90%', marginLeft: '5%', marginBottom: 8, fontWeight: '600' },
+  input: { width: '90%', backgroundColor: '#FFFFFF', paddingHorizontal: 20, paddingVertical: 12, borderRadius: 10, marginBottom: 20, fontSize: 16, color: '#333' },
+  materialsWrapper: { maxHeight: 130, width:'90%', marginBottom:20}, // Wrapper for horizontal scroll
+  materialsHorizontalScroll: { },
+  materialsContainer: { flexDirection: 'row', flexWrap: 'nowrap', // No wrap for horizontal scroll
+    paddingVertical: 5, backgroundColor: 'rgba(255,255,255,0.1)', borderRadius: 5 },
+  materialItem: { backgroundColor: '#A8C0FF', paddingVertical: 10, paddingHorizontal: 15, borderRadius: 20, marginHorizontal: 5, borderWidth: 1, borderColor: '#FFFFFF', height: 45, justifyContent:'center'},
+  selectedMaterialItem: { backgroundColor: '#446BCF', borderColor: '#FFD700' },
+  materialText: { color: '#333', fontSize: 13 },
+  selectedMaterialText: { color: '#FFFFFF', fontWeight: 'bold' },
+  difficultyContainer: { flexDirection: 'row', justifyContent: 'space-around', width: '90%', marginBottom: 30 },
+  difficultyBox: { flex: 1, marginHorizontal: 10, paddingVertical: 15, backgroundColor: '#A8C0FF', borderRadius: 8, borderWidth: 2, borderColor: '#FFFFFF', justifyContent: 'center', alignItems: 'center' },
+  selectedDifficultyBox: { backgroundColor: '#446BCF', borderColor: '#FFD700' },
+  difficultyBoxText: { color: '#333', fontSize: 14, fontWeight: 'bold' },
+  selectedDifficultyBoxText: { color: '#FFFFFF' },
+  button: { backgroundColor: '#446BCF', paddingVertical: 15, borderRadius: 25, width: '90%', alignItems: 'center', marginTop: 10, elevation: 3 },
+  buttonText: { color: '#FFFFFF', fontSize: 18, fontWeight: 'bold' },
 });
 
 export default InitialSetupScreen;

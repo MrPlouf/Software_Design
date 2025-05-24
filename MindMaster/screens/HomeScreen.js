@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import AppText from '../components/AppText';
 
 const HomeScreen = () => {
   const navigation = useNavigation();

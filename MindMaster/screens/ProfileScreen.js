@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ActivityIndicator, Alert, Image, ScrollView } from 'react-native';
 import { useNavigation, useIsFocused } from '@react-navigation/native';
 import { auth, db } from '../firebase';
+import AppText from '../components/AppText';
 
 // --- Image Mapping ---
 // Path to your base body sprite - ENSURE THIS FILE EXISTS AND PATH IS CORRECT

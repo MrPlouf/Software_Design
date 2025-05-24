@@ -4,6 +4,7 @@ import { View, Text, TextInput, StyleSheet, Alert, TouchableOpacity, ActivityInd
 import { useNavigation, CommonActions } from '@react-navigation/native'; // Import CommonActions
 import { auth, db } from '../firebase';
 import firebase from 'firebase/compat/app';
+import AppText from '../components/AppText';
 
 const SignupScreen = () => {
   const [email, setEmail] = useState('');

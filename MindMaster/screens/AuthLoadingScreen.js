@@ -1,4 +1,5 @@
 // screens/AuthLoadingScreen.js
+import AppText from '../components/AppText';
 import React, { useEffect } from 'react';
 import { View, ActivityIndicator, StyleSheet, Text, Alert } from 'react-native';
 import { useNavigation, CommonActions } from '@react-navigation/native'; // Added CommonActions
@@ -67,7 +68,7 @@ const AuthLoadingScreen = () => {
   return (
     <View style={styles.container}>
       <ActivityIndicator size="large" color="#FFFFFF" />
-      <Text style={styles.loadingText}>Initializing App...</Text>
+      <AppText style={styles.loadingText}>Initializing App...</AppText>
     </View>
   );
 };

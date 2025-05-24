@@ -1,180 +1,169 @@
 // screens/ChooseWorldScreen.js
-import React, { useState, useEffect } from 'react';
+import AppText from '../components/AppText';
+import React, { useState, useEffect, useCallback } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView, ActivityIndicator, Alert } from 'react-native';
-import { useNavigation, useRoute } from '@react-navigation/native';
+import { useNavigation, useRoute, useFocusEffect } from '@react-navigation/native';
 import { auth, db } from '../firebase';
+import { LinearGradient } from 'expo-linear-gradient'; 
 
-const LevelItem = ({ levelNumber, unlocked, onPress, isCompleted }) => (
+const PathConnectorView = ({ style }) => <View style={[styles.pathConnector, style]} />;
+
+const LevelNode = ({ levelDisplayNumber, unlocked, onPress, isCompleted, dynamicStyle }) => (
     <TouchableOpacity
-        style={[styles.levelItem, !unlocked && styles.lockedLevelItem, isCompleted && styles.completedLevelItem]}
-        onPress={unlocked ? onPress : () => Alert.alert("Locked", `Level ${levelNumber} is locked.`)}
-        disabled={!unlocked}
+        style={[styles.levelNodeBase, dynamicStyle, unlocked ? styles.levelNodeUnlocked : styles.levelNodeLocked, isCompleted && styles.levelNodeCompleted]}
+        onPress={unlocked ? onPress : () => Alert.alert("Locked", `Level ${levelDisplayNumber} is locked.`)}
+        disabled={!unlocked && !isCompleted}
     >
-        <Text style={styles.levelText}>Level {levelNumber}</Text>
-        {!unlocked && <Text style={styles.lockIcon}>🔒</Text>}
-        {unlocked && isCompleted && <Text style={styles.checkIcon}>✔️</Text>}
+        <Text style={styles.levelNodeText}>{levelDisplayNumber}</Text>
+        {(!unlocked && !isCompleted) && <View style={styles.levelLockOverlay}><Text style={styles.levelLockIcon}>🔒</Text></View>}
+        {isCompleted}
     </TouchableOpacity>
 );
+
+const calculateLevelNodePositions = (numLevels, canvasW, initialCanvasH) => { /* ... (same as before) ... */ 
+    if (!canvasW || !initialCanvasH || numLevels === 0) return { layouts: {}, calculatedCanvasHeight: initialCanvasH };
+    const layouts = {}; const nodeSize = 70; 
+    const topPadding = 50; const bottomPadding = 50; const horizontalPadding = 30; 
+    const verticalStep = nodeSize + 60; 
+    const availableWidth = canvasW - (2 * horizontalPadding) - nodeSize;
+    let calculatedCanvasHeight = topPadding; 
+    for (let i = 0; i < numLevels; i++) {
+        let xRatio; const posInPattern = i % 4;
+        if (posInPattern === 0) xRatio = 0.15; else if (posInPattern === 1) xRatio = 0.5; else if (posInPattern === 2) xRatio = 0.85; else xRatio = 0.5;                           
+        const left = horizontalPadding + (xRatio * availableWidth);
+        const top = topPadding + (i * verticalStep); 
+        layouts[`level_${i+1}`] = { top: top, left: Math.max(horizontalPadding, Math.min(left, canvasW - nodeSize - horizontalPadding)), width: nodeSize, height: nodeSize, zIndex: 10 + i, calculated: true };
+    }
+    if (numLevels > 0) { const lastNodeKey = `level_${numLevels}`; if (layouts[lastNodeKey]) { calculatedCanvasHeight = layouts[lastNodeKey].top + nodeSize + bottomPadding; } else { calculatedCanvasHeight = topPadding + (numLevels * verticalStep) - (verticalStep - nodeSize) + bottomPadding; }} else { calculatedCanvasHeight = initialCanvasH; }
+    return { layouts, calculatedCanvasHeight: Math.max(initialCanvasH, calculatedCanvasHeight) };
+};
 
 const ChooseWorldScreen = () => {
   const navigation = useNavigation();
   const route = useRoute();
-  const { worldId, worldName, startLevel, totalLevelsInWorld } = route.params; // Get params passed from ExplorationMapScreen
+  const { worldId: themeName, worldName, totalLevelsInWorld = 10 } = route.params; 
   
   const currentUser = auth.currentUser;
-  const [userProgress, setUserProgress] = useState(null);
+  const [userData, setUserData] = useState(null);
+  const [levelNodeLayouts, setLevelNodeLayouts] = useState({});
+  const [levelPathStyles, setLevelPathStyles] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [canvasLayout, setCanvasLayout] = useState({width:0, height:0, contentHeight:0});
 
-  useEffect(() => {
-    if (currentUser) {
-      const userRef = db.collection('users').doc(currentUser.uid);
-      const unsubscribe = userRef.onSnapshot(doc => {
-        if (doc.exists) {
-          setUserProgress(doc.data().progress || { highestLevelCompleted: 0, completedLevels: {} });
-        } else {
-          setUserProgress({ highestLevelCompleted: 0, completedLevels: {} });
+  useFocusEffect( /* ... (same as before) ... */ 
+    useCallback(() => {
+      let isActive = true;
+      const fetchUserData = async () => { if (!currentUser) { if(isActive) { navigation.replace('Auth'); setLoading(false); } return; } if(isActive) setLoading(true); const userRef = db.collection('users').doc(currentUser.uid); const unsubscribe = userRef.onSnapshot(doc => { if (!isActive) { if(typeof unsubscribe === 'function') unsubscribe(); return; } if (doc.exists) setUserData(doc.data()); else setUserData({ currentLevelByTheme: {} }); if(isActive) setLoading(false); }, err => { if(isActive) { console.error("ChooseWorld: User data error:", err); setLoading(false); }}); return unsubscribe; };
+      const unsubProm = fetchUserData();
+      return () => { isActive = false; unsubProm.then(unsub => { if (typeof unsub === 'function') unsub(); }).catch(e => console.error("ChooseWorld Unsub Err:", e));};
+    }, [currentUser, navigation])
+  );
+
+  useEffect(() => { /* ... (same as before) ... */ 
+    if (canvasLayout.width > 0 && canvasLayout.height > 0 && totalLevelsInWorld > 0) { const { layouts, calculatedCanvasHeight } = calculateLevelNodePositions(totalLevelsInWorld, canvasLayout.width, canvasLayout.height); setLevelNodeLayouts(layouts); setCanvasLayout(prev => ({...prev, contentHeight: calculatedCanvasHeight })); }
+  }, [canvasLayout.width, canvasLayout.height, totalLevelsInWorld]);
+
+  useEffect(() => { /* ... (same as before) ... */ 
+    const numLevels = totalLevelsInWorld; const allNodesHaveLayout = Array.from({length: numLevels}, (_,i) => levelNodeLayouts[`level_${i+1}`]?.calculated).every(Boolean);
+    if (allNodesHaveLayout && numLevels > 1) {
+      const paths = [];
+      for (let i = 0; i < numLevels - 1; i++) {
+        const startNodeLayout = levelNodeLayouts[`level_${i+1}`]; const endNodeLayout = levelNodeLayouts[`level_${i+2}`];
+        if (startNodeLayout && endNodeLayout) {
+          const startX = startNodeLayout.left + startNodeLayout.width / 2; const startY = startNodeLayout.top + startNodeLayout.height / 2; const endX = endNodeLayout.left + endNodeLayout.width / 2; const endY = endNodeLayout.top + endNodeLayout.height / 2;
+          const deltaX = endX - startX; const deltaY = endY - startY; const length = Math.sqrt(deltaX * deltaX + deltaY * deltaY); const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
+          paths.push({ width: length, height: 8, left: (startX + endX - length) / 2 , top: (startY + endY) / 2 - (8/2), transform: [{rotate: `${angle}deg`}], zIndex: 1 });
         }
-        setLoading(false);
-      }, err => {
-        console.error("Error fetching user progress for ChooseWorldScreen:", err);
-        setLoading(false);
-      });
-      return () => unsubscribe();
-    } else {
-      navigation.replace('Auth');
-      setLoading(false);
-    }
-  }, [currentUser, navigation]);
+      }
+      setLevelPathStyles(paths);
+    } else { setLevelPathStyles([]); }
+  }, [levelNodeLayouts, totalLevelsInWorld]);
 
-  const handleLevelPress = (levelAbsoluteNumber) => {
-    // Navigate to the GameScreen with world and level info
-    navigation.navigate('Game', { worldId, worldName, level: levelAbsoluteNumber });
-  };
+  if (loading && !userData) return <View style={[styles.screenContainerForLoading, styles.centered]}><ActivityIndicator size="large" color="#FFFFFF" /></View>;
 
-  if (loading) {
-    return <View style={[styles.container, {justifyContent: 'center'}]}><ActivityIndicator size="large" color="#FFFFFF" /></View>;
-  }
-
-  const levelsInThisWorld = Array.from({ length: totalLevelsInWorld }, (_, i) => startLevel + i);
+  const highestLevelCompletedForThisTheme = userData?.currentLevelByTheme?.[themeName] || 0;
+  const levelsToDisplay = Array.from({ length: totalLevelsInWorld }, (_, i) => i + 1);
 
   return (
-    <View style={styles.container}>
-      <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-        <Text style={styles.backButtonText}>{'< Exploration Map'}</Text>
-      </TouchableOpacity>
-      <Text style={styles.title}>Learn before exploring</Text>
-      <Text style={styles.worldTitle}>{worldName}</Text>
-      <ScrollView contentContainerStyle={styles.levelsContainer}>
-        {levelsInThisWorld.map((levelAbs) => {
-          // A level is unlocked if it's the first level of the world,
-          // or if the previous level (absolute numbering) is completed.
-          // The very first level (level 1) is always unlocked.
-          const isUnlocked = levelAbs === 1 || (userProgress && userProgress.highestLevelCompleted >= levelAbs - 1);
-          const isCompleted = userProgress && userProgress.completedLevels && userProgress.completedLevels[worldId] && userProgress.completedLevels[worldId].includes(levelAbs);
-          
-          return (
-            <LevelItem
-                key={levelAbs}
-                levelNumber={levelAbs}
-                unlocked={isUnlocked}
-                isCompleted={isCompleted}
-                onPress={() => handleLevelPress(levelAbs)}
-            />
-          );
-        })}
-      </ScrollView>
-       <TouchableOpacity 
-        style={styles.otherResourcesButton}
-        onPress={() => Alert.alert("Info", "Game Wiki and Learning resources link here.")}
-      >
-        <Text style={styles.otherResourcesButtonText}>Game Wiki and Learning</Text>
-      </TouchableOpacity>
-    </View>
+    <LinearGradient colors={['#4A6C9B', '#6B8EB5', '#8AAAD0']} style={styles.screenGradientBackground}>
+      <View style={styles.screenContentContainer}>
+        <View style={styles.header}>
+            <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+                <AppText style={styles.backButtonText}>{'< Map'}</AppText>
+            </TouchableOpacity>
+            <AppText style={styles.title} numberOfLines={1} ellipsizeMode="tail">{worldName}</AppText>
+            <View style={{width:50}} />
+        </View>
+        {/* SubTitle is correctly wrapped */}
+        <AppText style={styles.subTitle}>Choose a Level</AppText> 
+        
+        <View 
+          style={styles.levelPathScrollViewContainer}
+          onLayout={(event) => {
+              const { width, height } = event.nativeEvent.layout;
+              if (width > 0 && height > 0 && (!canvasLayout.width || !canvasLayout.height)) { 
+                setCanvasLayout({ width, height, contentHeight: height }); 
+              }
+          }}
+        >
+          {canvasLayout.width > 0 && canvasLayout.height > 0 && ( 
+              <ScrollView 
+                contentContainerStyle={{ height: canvasLayout.contentHeight }} 
+                showsVerticalScrollIndicator={true}
+              >
+                <View style={styles.levelCanvas}> 
+                    {levelPathStyles.map((pathStyle, index) => (
+                        <PathConnectorView key={`path-lvl-${index}`} style={pathStyle} />
+                    ))}
+                    {levelsToDisplay.map((levelNum) => {
+                        const isUnlocked = levelNum === 1 || highestLevelCompletedForThisTheme >= (levelNum - 1);
+                        const isCompleted = highestLevelCompletedForThisTheme >= levelNum;
+                        return ( 
+                            <LevelNode 
+                                key={levelNum} 
+                                levelDisplayNumber={levelNum} 
+                                unlocked={isUnlocked || isCompleted} 
+                                isCompleted={isCompleted} 
+                                dynamicStyle={levelNodeLayouts[`level_${levelNum}`] || {opacity:0}}
+                                onPress={() => navigation.navigate('Game', { worldId: themeName, worldName: worldName, level: levelNum })} 
+                            /> 
+                        );
+                    })}
+                </View>
+              </ScrollView>
+          )}
+        </View>
+        <TouchableOpacity style={styles.otherResourcesButton} onPress={() => Alert.alert("Info", "Game Wiki/Learning (WIP)")} >
+          <Text style={styles.otherResourcesButtonText}>Game Wiki and Learning</Text>
+        </TouchableOpacity>
+      </View>
+    </LinearGradient>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 50,
-    paddingHorizontal: 20,
-    backgroundColor: '#81A9FF',
-  },
-  backButton: {
-    position: 'absolute',
-    top: 55,
-    left: 20,
-    zIndex: 1,
-  },
-  backButtonText: {
-    color: '#FFFFFF',
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
-  title: {
-    fontSize: 22,
-    fontWeight: '600',
-    color: '#FFFFFF',
-    textAlign: 'center',
-    marginBottom: 5,
-    fontFamily: 'Jockey One',
-  },
-  worldTitle: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    color: '#FFFFFF',
-    textAlign: 'center',
-    marginBottom: 20,
-    fontFamily: 'Jockey One',
-  },
-  levelsContainer: {
-    paddingBottom: 20,
-  },
-  levelItem: {
-    backgroundColor: '#446BCF',
-    paddingVertical: 20,
-    paddingHorizontal: 15,
-    borderRadius: 10,
-    marginBottom: 15,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    elevation: 2,
-  },
-  lockedLevelItem: {
-    backgroundColor: '#788cb3',
-  },
-  completedLevelItem: {
-    backgroundColor: '#3e8e41', // A green color for completed
-    borderColor: '#FFD700',
-    borderWidth: 1,
-  },
-  levelText: {
-    fontSize: 18,
-    color: '#FFFFFF',
-    fontWeight: 'bold',
-  },
-  lockIcon: {
-    fontSize: 20,
-    color: '#FFFFFF',
-  },
-  checkIcon: {
-    fontSize: 20,
-    color: '#FFFFFF',
-  },
-  otherResourcesButton: {
-    backgroundColor: '#6c757d',
-    paddingVertical: 15,
-    borderRadius: 10,
-    alignItems: 'center',
-    marginTop: 10,
-    marginBottom: 10,
-  },
-  otherResourcesButtonText: {
-    color: '#FFFFFF',
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
+  screenGradientBackground: { flex: 1 },
+  screenContentContainer: { flex: 1, paddingTop: 30, paddingHorizontal: 15, /* No bg color, gradient handles it */ },
+  screenContainerForLoading: { flex: 1, backgroundColor: '#304A7E', justifyContent:'center', alignItems:'center' }, 
+  centered: { justifyContent: 'center', alignItems: 'center'},
+  header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingTop: 30, paddingBottom:10, marginBottom:5},
+  backButton: { padding:10, backgroundColor:'rgba(0,0,0,0.15)', borderRadius: 20 },
+  backButtonText: { color: '#FFFFFF', fontSize: 16, fontWeight: 'bold'},
+  title: { fontSize: 22, fontWeight: 'bold', color: '#FFFFFF', fontFamily: 'Jockey One', flex:1, textAlign:'center', textShadowColor:'rgba(0,0,0,0.5)', textShadowOffset:{width:1,height:1}, textShadowRadius:2},
+  subTitle: { fontSize: 18, color: '#E0E0FF', textAlign: 'center', marginBottom: 15, fontWeight:'600'},
+  levelPathScrollViewContainer: { flex: 1, position: 'relative' },
+  levelCanvas: { position: 'relative' },
+  levelNodeBase: { width: 70, height: 70, borderRadius: 35, justifyContent: 'center', alignItems: 'center', borderWidth: 2.5, elevation: 4, shadowColor: '#000', shadowOffset: { width: 1, height: 3 }, shadowOpacity: 0.3, shadowRadius: 3, position: 'absolute' },
+  levelNodeUnlocked: { backgroundColor: '#6C92F4', borderColor: '#A8C0FF' },
+  levelNodeLocked: { backgroundColor: '#78909C', borderColor: '#546E7A', opacity:0.7 },
+  levelNodeCompleted: { backgroundColor: '#66BB6A', borderColor: '#A5D6A7' },
+  levelNodeText: { fontSize: 22, color: '#FFFFFF', fontWeight: 'bold', fontFamily: 'Jockey One' },
+  levelLockOverlay: { ...StyleSheet.absoluteFillObject, backgroundColor:'rgba(0,0,0,0.4)', borderRadius:32.5, justifyContent:'center', alignItems:'center'},
+  levelLockIcon: { fontSize: 24, color: '#FFFFFF' },
+  levelCheckIcon: { fontSize: 24, color: '#FFFFFF' }, 
+  pathConnector: { position: 'absolute', height: 8, backgroundColor: 'rgba(200, 200, 180, 0.6)', borderRadius: 4, zIndex: 1 },
+  otherResourcesButton: { backgroundColor: 'rgba(0,0,0,0.3)', paddingVertical: 12, borderRadius: 10, alignItems: 'center', marginTop: 15, marginBottom: 20, marginHorizontal: 10 },
+  otherResourcesButtonText: { color: '#FFFFFF', fontSize: 15, fontWeight: 'bold' },
 });
 
 export default ChooseWorldScreen;

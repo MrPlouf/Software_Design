@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, Alert, TouchableOpacity, ActivityIndicator } from 'react-native';
 import { useNavigation, CommonActions } from '@react-navigation/native'; // Import CommonActions
 import { auth, db } from '../firebase'; // Path to your firebase.js
+import AppText from '../components/AppText';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
