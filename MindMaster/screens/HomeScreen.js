@@ -24,14 +24,6 @@ const HomeScreen = () => {
       >
         <Text style={styles.buttonText}>Register</Text>
       </TouchableOpacity>
-
-      {/* Optional: Guest Mode */}
-      <TouchableOpacity 
-        style={[styles.button, styles.guestButton]}
-        onPress={() => navigation.navigate('Game')} // Directly to game as guest
-      >
-        <Text style={styles.buttonText}>Play as Guest</Text>
-      </TouchableOpacity>
     </View>
   );
 };

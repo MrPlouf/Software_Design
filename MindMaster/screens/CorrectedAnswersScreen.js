@@ -1,15 +1,47 @@
 // screens/CorrectedAnswersScreen.js
-import AppText from '../components/AppText';
-import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, FlatList, ActivityIndicator, TouchableOpacity, Alert } from 'react-native';
+import React, { useState, useEffect, useCallback } from 'react';
+import { View, Text, StyleSheet, FlatList, ActivityIndicator, TouchableOpacity, Alert, ScrollView } from 'react-native';
 import { useNavigation, useIsFocused } from '@react-navigation/native';
 import { auth, db } from '../firebase';
+// Assuming AppText is your custom component for default font
+// import AppText from '../components/AppText'; 
+
+const CorrectedAnswerItem = ({ item }) => {
+  const [showAnswer, setShowAnswer] = useState(false);
+  const correctChoices = item.choices?.filter(c => c.isCorrect).map(c => c.text).join('; ') || 'N/A';
+
+  return (
+    <View style={styles.itemContainer}>
+      <View style={styles.itemHeader}>
+        <Text style={styles.itemThemeText}>{item.themeName || 'General'} - Lvl {item.levelAnswered || 'N/A'}</Text>
+        {item.masteredAt?.toDate && (
+            <Text style={styles.itemDateText}>{item.masteredAt.toDate().toLocaleDateString()}</Text>
+        )}
+      </View>
+      <Text style={styles.itemQuestionText}>{item.questionText || 'Question text missing'}</Text>
+      <TouchableOpacity onPress={() => setShowAnswer(!showAnswer)} style={styles.showAnswerButton}>
+        <Text style={styles.showAnswerButtonText}>{showAnswer ? 'Hide Answer' : 'Show Answer'}</Text>
+      </TouchableOpacity>
+      {showAnswer && (
+        <View style={styles.answerContainer}>
+          <Text style={styles.answerLabel}>Correct Answer(s):</Text>
+          <Text style={styles.answerText}>{correctChoices}</Text>
+        </View>
+      )}
+    </View>
+  );
+};
 
 const CorrectedAnswersScreen = () => {
   const navigation = useNavigation();
   const isFocused = useIsFocused();
   const currentUser = auth.currentUser;
-  const [masteredQuestions, setMasteredQuestions] = useState([]);
+  
+  const [allMasteredQuestions, setAllMasteredQuestions] = useState([]);
+  const [filteredMasteredQuestions, setFilteredMasteredQuestions] = useState([]);
+  const [selectedThemeFilter, setSelectedThemeFilter] = useState('All'); 
+  const [availableThemesForFilter, setAvailableThemesForFilter] = useState(['All']);
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -20,66 +52,79 @@ const CorrectedAnswersScreen = () => {
         .then(doc => {
           if (doc.exists) {
             const data = doc.data();
-            // Ensure masteredQuestions is an array, sort by masteredAt if available
-            const sortedMastered = (data.masteredQuestions || []).sort((a, b) => {
-                const timeA = a.masteredAt?.toDate ? a.masteredAt.toDate().getTime() : 0;
-                const timeB = b.masteredAt?.toDate ? b.masteredAt.toDate().getTime() : 0;
-                return timeB - timeA; // Most recent first
-            });
-            setMasteredQuestions(sortedMastered);
+            const mastered = (data.masteredQuestions || []).sort((a, b) => 
+                (b.masteredAt?.toDate ? b.masteredAt.toDate().getTime() : 0) - 
+                (a.masteredAt?.toDate ? a.masteredAt.toDate().getTime() : 0)
+            );
+            setAllMasteredQuestions(mastered);
+            const themesInMastered = [...new Set(mastered.map(q => q.themeName).filter(Boolean))];
+            setAvailableThemesForFilter(['All', ...themesInMastered.sort()]);
+            if (selectedThemeFilter === 'All' || !themesInMastered.includes(selectedThemeFilter)) {
+                setFilteredMasteredQuestions(mastered);
+                if(!themesInMastered.includes(selectedThemeFilter) && selectedThemeFilter !== 'All') setSelectedThemeFilter('All');
+            } else {
+                setFilteredMasteredQuestions(mastered.filter(q => q.themeName === selectedThemeFilter));
+            }
           } else {
-            setMasteredQuestions([]);
-            console.warn("CorrectedAnswersScreen: User document not found.");
+            setAllMasteredQuestions([]); setFilteredMasteredQuestions([]); setAvailableThemesForFilter(['All']);
           }
           setLoading(false);
         })
         .catch(error => {
-          console.error("Error fetching mastered questions:", error);
+          console.error("Error fetching mastered questions:", error); setLoading(false);
           Alert.alert("Error", "Could not load your mastered questions.");
-          setMasteredQuestions([]);
-          setLoading(false);
         });
-    } else if (!currentUser) {
-      navigation.replace('Auth');
-      setLoading(false);
+    } else if (!currentUser) { 
+        navigation.replace('Auth'); 
+        setLoading(false); 
     }
   }, [currentUser, navigation, isFocused]);
 
+  useEffect(() => {
+    if (selectedThemeFilter === 'All') setFilteredMasteredQuestions(allMasteredQuestions);
+    else setFilteredMasteredQuestions(allMasteredQuestions.filter(q => q.themeName === selectedThemeFilter));
+  }, [selectedThemeFilter, allMasteredQuestions]);
+
+  const renderHeader = () => (
+    <View style={styles.header}>
+    </View>
+  );
+
   if (loading) {
-    return <View style={styles.centered}><ActivityIndicator size="large" color="#FFFFFF" /></View>;
+    return ( <View style={styles.container}>{renderHeader()}<View style={styles.centeredFull}><ActivityIndicator size="large" color="#FFFFFF" /></View></View> );
   }
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.goBack()}>
-            <Text style={styles.backButtonText}>{'< Menu'}</Text>
-        </TouchableOpacity>
-        <Text style={styles.title}>Mastered Questions</Text>
-        <View style={{width:70}} />{/* Spacer to balance header */}
+      {renderHeader()}
+
+      <View style={styles.filterBar}>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.filterScrollContainer}>
+          {availableThemesForFilter.map(theme => (
+              <TouchableOpacity 
+                  key={theme} 
+                  style={[styles.filterButton, selectedThemeFilter === theme && styles.activeFilterButton]}
+                  onPress={() => setSelectedThemeFilter(theme)}
+              >
+                  <Text style={[styles.filterButtonText, selectedThemeFilter === theme && styles.activeFilterButtonText]}>{theme}</Text>
+              </TouchableOpacity>
+          ))}
+        </ScrollView>
       </View>
 
-      {masteredQuestions.length === 0 ? (
-        <View style={styles.centeredContent}>
-          <Text style={styles.emptyText}>You haven't mastered any questions yet!</Text>
-          <Text style={styles.emptySubText}>Pass levels in the game to see your correctly answered questions here.</Text>
+      {filteredMasteredQuestions.length === 0 ? (
+        <View style={styles.centeredFull}>
+          <Text style={styles.emptyText}>
+            {selectedThemeFilter === 'All' ? "No mastered questions yet!" : `No mastered questions for ${selectedThemeFilter}.`}
+          </Text>
         </View>
       ) : (
         <FlatList
-          data={masteredQuestions}
-          keyExtractor={(item) => item.questionId + (item.masteredAt?.seconds || Math.random().toString())} // More unique key
-          renderItem={({ item }) => (
-            <View style={styles.itemContainer}>
-              <Text style={styles.itemThemeText}>{item.themeName || 'General'}</Text>
-              <Text style={styles.itemQuestionText}>{item.questionText || 'Question text missing'}</Text>
-              {item.masteredAt?.toDate && (
-                  <Text style={styles.itemDateText}>
-                      Mastered: {item.masteredAt.toDate().toLocaleDateString()}
-                  </Text>
-              )}
-            </View>
-          )}
+          data={filteredMasteredQuestions}
+          keyExtractor={(item) => item.questionId + (item.masteredAt?.seconds || Math.random().toString())}
+          renderItem={({ item }) => <CorrectedAnswerItem item={item} />}
           contentContainerStyle={styles.listContentContainer}
+          style={styles.listStyle}
         />
       )}
     </View>
@@ -87,40 +132,59 @@ const CorrectedAnswersScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#81A9FF', paddingTop: 30 },
-  centered: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20, backgroundColor: '#81A9FF' }, // For full screen loader
-  centeredContent: { flex:1, justifyContent: 'center', alignItems: 'center', padding: 20}, // For empty message
-  header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20, marginTop:25, paddingHorizontal: 20},
-  backButtonText: { color: '#FFFFFF', fontSize: 16, fontWeight: 'bold'},
-  title: { fontSize: 22, fontWeight: 'bold', color: '#FFFFFF', fontFamily: 'Jockey One' },
-  emptyText: { fontSize: 18, fontWeight:'bold', color: '#E0E0E0', textAlign: 'center', marginBottom:10 },
-  emptySubText: { fontSize: 14, color: '#D0D0FF', textAlign: 'center' },
-  listContentContainer: { paddingHorizontal: 20, paddingBottom: 20 },
-  itemContainer: {
-    backgroundColor: 'rgba(255,255,255,0.1)',
-    padding: 15,
-    borderRadius: 8,
-    marginBottom: 12,
-    borderLeftWidth: 4,
-    borderLeftColor: '#FFD700' // Gold accent
+  container: { flex: 1, backgroundColor: '#81A9FF' }, // Removed paddingTop, header handles it
+  centeredFull: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20 },
+  backButton: { paddingVertical: 5, paddingHorizontal: 10, }, // Made tappable area slightly bigger
+  backButtonText: { color: '#FFFFFF', fontSize: 16, fontWeight: '500', fontFamily:'JockeyOne-Regular'},
+  title: { fontSize: 18, fontWeight: 'bold', color: '#FFFFFF', fontFamily: 'JockeyOne-Regular', textAlign:'center', flex:1 },
+  headerSpacer: { width: 60 }, // To balance the back button width for title centering
+  
+  filterBar: { // Container for the filter ScrollView
+    paddingVertical: 8,
+    backgroundColor: 'rgba(0,0,0,0.1)',
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgba(0,0,0,0.05)',
   },
-  itemThemeText: {
+  filterScrollContainer: { // For the content of the horizontal ScrollView
+    paddingHorizontal: 15,
+    alignItems: 'center', // Center buttons vertically if they have different text lengths
+  },
+  filterButton: {
+    paddingVertical: 6, // Smaller padding
+    paddingHorizontal: 12, // Smaller padding
+    borderRadius: 15, // More rounded
+    backgroundColor: 'rgba(255,255,255,0.15)',
+    marginRight: 8,
+    borderWidth: 1,
+    borderColor: 'transparent',
+  },
+  activeFilterButton: {
+    backgroundColor: '#FFD700', 
+    borderColor: 'rgba(255,255,255,0.5)',
+  },
+  filterButtonText: {
+    color: '#E0E0FF', // Lighter text for inactive
     fontSize: 13,
-    color: '#A8C0FF',
-    marginBottom: 5,
-    fontWeight: '600',
+    fontFamily:'JockeyOne-Regular',
   },
-  itemQuestionText: {
-    fontSize: 15,
-    color: '#FFFFFF',
-    lineHeight: 20,
+  activeFilterButtonText: {
+    color: '#4A6C9B', // Darker text for active
+    fontWeight: 'bold',
   },
-  itemDateText: {
-      fontSize: 11,
-      color: 'rgba(255,255,255,0.7)',
-      marginTop: 8,
-      textAlign: 'right'
-  }
+
+  emptyText: { fontSize: 16, color: '#D0D0E0', textAlign: 'center', paddingHorizontal: 20, fontFamily:'JockeyOne-Regular' }, // Slightly lighter
+  listStyle: { flex: 1 },
+  listContentContainer: { paddingHorizontal: 15, paddingTop: 15, paddingBottom: 20 },
+  itemContainer: { backgroundColor: 'rgba(255,255,255,0.08)', padding: 12, borderRadius: 6, marginBottom: 10, borderLeftWidth: 3, borderLeftColor: '#FFD700' }, // Subtler item
+  itemHeader: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 5},
+  itemThemeText: { fontSize: 12, color: '#A8C0FF', fontWeight: '600', fontFamily:'JockeyOne-Regular' },
+  itemQuestionText: { fontSize: 14, color: '#FFFFFF', lineHeight: 19, fontFamily:'JockeyOne-Regular', marginBottom: 8 },
+  itemDateText: { fontSize: 10, color: 'rgba(255,255,255,0.6)', fontFamily:'JockeyOne-Regular' },
+  showAnswerButton: { backgroundColor: 'rgba(0,0,0,0.2)', paddingVertical: 6, paddingHorizontal:10, borderRadius: 4, alignSelf: 'flex-start', marginTop: 8 },
+  showAnswerButtonText: { color: '#E0E0FF', fontSize: 12, fontWeight:'500', fontFamily:'JockeyOne-Regular' },
+  answerContainer: { marginTop: 8, paddingTop: 8, borderTopWidth: 1, borderTopColor: 'rgba(255,255,255,0.15)'},
+  answerLabel: { fontSize: 12, color: '#A8C0FF', fontWeight: '500', fontFamily:'JockeyOne-Regular'},
+  answerText: { fontSize: 13, color: '#FFFFFF', marginTop: 2, fontFamily:'JockeyOne-Regular'},
 });
 
 export default CorrectedAnswersScreen;

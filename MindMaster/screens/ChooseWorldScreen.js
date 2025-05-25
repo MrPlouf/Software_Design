@@ -85,7 +85,7 @@ const ChooseWorldScreen = () => {
   const levelsToDisplay = Array.from({ length: totalLevelsInWorld }, (_, i) => i + 1);
 
   return (
-    <LinearGradient colors={['#4A6C9B', '#6B8EB5', '#8AAAD0']} style={styles.screenGradientBackground}>
+    <LinearGradient colors={['#81A9FF', '#81A9FF', '#6A8AB0']} style={styles.screenGradientBackground}>
       <View style={styles.screenContentContainer}>
         <View style={styles.header}>
             <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
@@ -95,7 +95,6 @@ const ChooseWorldScreen = () => {
             <View style={{width:50}} />
         </View>
         {/* SubTitle is correctly wrapped */}
-        <AppText style={styles.subTitle}>Choose a Level</AppText> 
         
         <View 
           style={styles.levelPathScrollViewContainer}
@@ -147,21 +146,21 @@ const styles = StyleSheet.create({
   screenContainerForLoading: { flex: 1, backgroundColor: '#304A7E', justifyContent:'center', alignItems:'center' }, 
   centered: { justifyContent: 'center', alignItems: 'center'},
   header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingTop: 30, paddingBottom:10, marginBottom:5},
-  backButton: { padding:10, backgroundColor:'rgba(0,0,0,0.15)', borderRadius: 20 },
+  backButton: { padding:10, backgroundColor:'rgba(0,0,0,0)', borderRadius: 20 },
   backButtonText: { color: '#FFFFFF', fontSize: 16, fontWeight: 'bold'},
   title: { fontSize: 22, fontWeight: 'bold', color: '#FFFFFF', fontFamily: 'Jockey One', flex:1, textAlign:'center', textShadowColor:'rgba(0,0,0,0.5)', textShadowOffset:{width:1,height:1}, textShadowRadius:2},
   subTitle: { fontSize: 18, color: '#E0E0FF', textAlign: 'center', marginBottom: 15, fontWeight:'600'},
   levelPathScrollViewContainer: { flex: 1, position: 'relative' },
   levelCanvas: { position: 'relative' },
   levelNodeBase: { width: 70, height: 70, borderRadius: 35, justifyContent: 'center', alignItems: 'center', borderWidth: 2.5, elevation: 4, shadowColor: '#000', shadowOffset: { width: 1, height: 3 }, shadowOpacity: 0.3, shadowRadius: 3, position: 'absolute' },
-  levelNodeUnlocked: { backgroundColor: '#6C92F4', borderColor: '#A8C0FF' },
-  levelNodeLocked: { backgroundColor: '#78909C', borderColor: '#546E7A', opacity:0.7 },
-  levelNodeCompleted: { backgroundColor: '#66BB6A', borderColor: '#A5D6A7' },
+  levelNodeUnlocked: { backgroundColor: '#446BCF', borderColor: '#A8C0FF' },
+  levelNodeLocked: { backgroundColor: 'rgb(50,50,50)', borderColor: '#546E7A', opacity:100 },
+  levelNodeCompleted: { backgroundColor: 'rgba(44, 127, 46, 100)', borderColor: 'rgba(84, 167, 86, 100)' },
   levelNodeText: { fontSize: 22, color: '#FFFFFF', fontWeight: 'bold', fontFamily: 'Jockey One' },
-  levelLockOverlay: { ...StyleSheet.absoluteFillObject, backgroundColor:'rgba(0,0,0,0.4)', borderRadius:32.5, justifyContent:'center', alignItems:'center'},
+  levelLockOverlay: { ...StyleSheet.absoluteFillObject, backgroundColor:'rgb(20,20,20)', borderRadius:32.5, justifyContent:'center', alignItems:'center'},
   levelLockIcon: { fontSize: 24, color: '#FFFFFF' },
   levelCheckIcon: { fontSize: 24, color: '#FFFFFF' }, 
-  pathConnector: { position: 'absolute', height: 8, backgroundColor: 'rgba(200, 200, 180, 0.6)', borderRadius: 4, zIndex: 1 },
+  pathConnector: { position: 'absolute', height: 8, backgroundColor: 'rgba(0, 0, 0, 0.5)', borderRadius: 4, zIndex: 1 },
   otherResourcesButton: { backgroundColor: 'rgba(0,0,0,0.3)', paddingVertical: 12, borderRadius: 10, alignItems: 'center', marginTop: 15, marginBottom: 20, marginHorizontal: 10 },
   otherResourcesButtonText: { color: '#FFFFFF', fontSize: 15, fontWeight: 'bold' },
 });

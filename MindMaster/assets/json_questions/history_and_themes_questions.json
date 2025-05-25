@@ -2,26 +2,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the opposite of 'hot'?",
+    "questionText": "Which empire ruled Rome?",
     "choices": [
       {
         "letter": "A",
-        "text": "Cold",
-        "isCorrect": true
+        "text": "Greek",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Heat",
-        "isCorrect": false
+        "text": "Roman",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Cool",
+        "text": "Byzantine",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Warm",
+        "text": "Persian",
         "isCorrect": false
       }
     ]
@@ -29,80 +29,80 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the plural of 'child'?",
+    "questionText": "Which empire ruled Rome?",
     "choices": [
       {
         "letter": "A",
-        "text": "Child",
+        "text": "Greek",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Childs",
+        "text": "Persian",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Childes",
-        "isCorrect": false
+        "text": "Roman",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Children",
-        "isCorrect": true
+        "text": "Byzantine",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "An",
-        "isCorrect": true
+        "text": "Aztecs",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "No",
+        "text": "Romans",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "The",
+        "text": "Greeks",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "A",
-        "isCorrect": false
+        "text": "Egyptians",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the plural of 'child'?",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "Childes",
+        "text": "Jefferson",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Child",
-        "isCorrect": false
+        "text": "Washington",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Children",
-        "isCorrect": true
+        "text": "Adams",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Childs",
+        "text": "Lincoln",
         "isCorrect": false
       }
     ]
@@ -110,26 +110,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Which war ended in 1945?",
     "choices": [
       {
         "letter": "A",
-        "text": "The",
-        "isCorrect": false
+        "text": "WWII",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "No",
+        "text": "Cold War",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "An",
-        "isCorrect": true
+        "text": "Vietnam War",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "A",
+        "text": "WWI",
         "isCorrect": false
       }
     ]
@@ -137,53 +137,53 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word is a noun?",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "Quick",
+        "text": "Romans",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Happy",
-        "isCorrect": false
+        "text": "Egyptians",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Run",
+        "text": "Greeks",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Apple",
-        "isCorrect": true
+        "text": "Aztecs",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Which empire ruled Rome?",
     "choices": [
       {
         "letter": "A",
-        "text": "A",
+        "text": "Byzantine",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "An",
+        "text": "Roman",
         "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "No",
+        "text": "Persian",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "The",
+        "text": "Greek",
         "isCorrect": false
       }
     ]
@@ -191,26 +191,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word is a noun?",
+    "questionText": "Who discovered America?",
     "choices": [
       {
         "letter": "A",
-        "text": "Quick",
-        "isCorrect": false
+        "text": "Columbus",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Happy",
+        "text": "Drake",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Apple",
-        "isCorrect": true
+        "text": "Cook",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Run",
+        "text": "Magellan",
         "isCorrect": false
       }
     ]
@@ -218,26 +218,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the opposite of 'hot'?",
+    "questionText": "Which empire ruled Rome?",
     "choices": [
       {
         "letter": "A",
-        "text": "Cool",
+        "text": "Greek",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Cold",
-        "isCorrect": true
+        "text": "Persian",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Heat",
-        "isCorrect": false
+        "text": "Roman",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Warm",
+        "text": "Byzantine",
         "isCorrect": false
       }
     ]
@@ -245,26 +245,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Who discovered America?",
     "choices": [
       {
         "letter": "A",
-        "text": "An",
+        "text": "Columbus",
         "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "No",
+        "text": "Cook",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "The",
+        "text": "Drake",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "A",
+        "text": "Magellan",
         "isCorrect": false
       }
     ]
@@ -272,26 +272,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word is a noun?",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "Happy",
-        "isCorrect": false
+        "text": "Washington",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Apple",
-        "isCorrect": true
+        "text": "Jefferson",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Quick",
+        "text": "Lincoln",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Run",
+        "text": "Adams",
         "isCorrect": false
       }
     ]
@@ -299,26 +299,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the plural of 'child'?",
+    "questionText": "Which war ended in 1945?",
     "choices": [
       {
         "letter": "A",
-        "text": "Child",
+        "text": "Vietnam War",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Children",
-        "isCorrect": true
+        "text": "Cold War",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Childes",
-        "isCorrect": false
+        "text": "WWII",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Childs",
+        "text": "WWI",
         "isCorrect": false
       }
     ]
@@ -326,26 +326,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the plural of 'child'?",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "Childes",
+        "text": "Lincoln",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Childs",
-        "isCorrect": false
+        "text": "Washington",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Children",
-        "isCorrect": true
+        "text": "Adams",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Child",
+        "text": "Jefferson",
         "isCorrect": false
       }
     ]
@@ -353,26 +353,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "No",
+        "text": "Aztecs",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "A",
-        "isCorrect": false
+        "text": "Egyptians",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "An",
-        "isCorrect": true
+        "text": "Romans",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "The",
+        "text": "Greeks",
         "isCorrect": false
       }
     ]
@@ -380,107 +380,107 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Who discovered America?",
     "choices": [
       {
         "letter": "A",
-        "text": "An",
-        "isCorrect": true
+        "text": "Magellan",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "The",
+        "text": "Drake",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "A",
+        "text": "Cook",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "No",
-        "isCorrect": false
+        "text": "Columbus",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the plural of 'child'?",
+    "questionText": "Who discovered America?",
     "choices": [
       {
         "letter": "A",
-        "text": "Children",
-        "isCorrect": true
+        "text": "Magellan",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Childes",
+        "text": "Drake",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Childs",
+        "text": "Cook",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Child",
-        "isCorrect": false
+        "text": "Columbus",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word rhymes with 'cat'?",
+    "questionText": "Who discovered America?",
     "choices": [
       {
         "letter": "A",
-        "text": "Mat",
-        "isCorrect": true
+        "text": "Cook",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Dog",
+        "text": "Drake",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Hat",
+        "text": "Magellan",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Run",
-        "isCorrect": false
+        "text": "Columbus",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word is a noun?",
+    "questionText": "Which empire ruled Rome?",
     "choices": [
       {
         "letter": "A",
-        "text": "Apple",
-        "isCorrect": true
+        "text": "Persian",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Happy",
+        "text": "Greek",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Run",
-        "isCorrect": false
+        "text": "Roman",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Quick",
+        "text": "Byzantine",
         "isCorrect": false
       }
     ]
@@ -488,26 +488,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word rhymes with 'cat'?",
+    "questionText": "Who discovered America?",
     "choices": [
       {
         "letter": "A",
-        "text": "Mat",
-        "isCorrect": true
+        "text": "Cook",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Hat",
-        "isCorrect": false
+        "text": "Columbus",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Dog",
+        "text": "Magellan",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Run",
+        "text": "Drake",
         "isCorrect": false
       }
     ]
@@ -515,26 +515,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the plural of 'child'?",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "Children",
+        "text": "Washington",
         "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Childs",
+        "text": "Adams",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Childes",
+        "text": "Lincoln",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Child",
+        "text": "Jefferson",
         "isCorrect": false
       }
     ]
@@ -542,53 +542,53 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Which empire ruled Rome?",
     "choices": [
       {
         "letter": "A",
-        "text": "The",
+        "text": "Persian",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "An",
-        "isCorrect": true
+        "text": "Greek",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "A",
+        "text": "Byzantine",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "No",
-        "isCorrect": false
+        "text": "Roman",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word rhymes with 'cat'?",
+    "questionText": "Who discovered America?",
     "choices": [
       {
         "letter": "A",
-        "text": "Mat",
-        "isCorrect": true
+        "text": "Cook",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Run",
-        "isCorrect": false
+        "text": "Columbus",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Hat",
+        "text": "Drake",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Dog",
+        "text": "Magellan",
         "isCorrect": false
       }
     ]
@@ -596,53 +596,53 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word is a noun?",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "Quick",
+        "text": "Greeks",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Happy",
+        "text": "Romans",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Apple",
-        "isCorrect": true
+        "text": "Aztecs",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Run",
-        "isCorrect": false
+        "text": "Egyptians",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word is a noun?",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "Run",
-        "isCorrect": false
+        "text": "Washington",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Happy",
+        "text": "Lincoln",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Apple",
-        "isCorrect": true
+        "text": "Adams",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Quick",
+        "text": "Jefferson",
         "isCorrect": false
       }
     ]
@@ -650,26 +650,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word is a noun?",
+    "questionText": "Which empire ruled Rome?",
     "choices": [
       {
         "letter": "A",
-        "text": "Run",
+        "text": "Persian",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Happy",
+        "text": "Greek",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Apple",
+        "text": "Roman",
         "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Quick",
+        "text": "Byzantine",
         "isCorrect": false
       }
     ]
@@ -677,26 +677,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "An",
+        "text": "Egyptians",
         "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "A",
+        "text": "Romans",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "The",
+        "text": "Greeks",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "No",
+        "text": "Aztecs",
         "isCorrect": false
       }
     ]
@@ -704,53 +704,53 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word rhymes with 'cat'?",
+    "questionText": "Which empire ruled Rome?",
     "choices": [
       {
         "letter": "A",
-        "text": "Dog",
+        "text": "Greek",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Run",
+        "text": "Byzantine",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Hat",
-        "isCorrect": false
+        "text": "Roman",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Mat",
-        "isCorrect": true
+        "text": "Persian",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "The",
+        "text": "Romans",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "No",
+        "text": "Greeks",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "An",
+        "text": "Egyptians",
         "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "A",
+        "text": "Aztecs",
         "isCorrect": false
       }
     ]
@@ -758,53 +758,53 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Which empire ruled Rome?",
     "choices": [
       {
         "letter": "A",
-        "text": "A",
+        "text": "Byzantine",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "An",
-        "isCorrect": true
+        "text": "Greek",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "The",
+        "text": "Persian",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "No",
-        "isCorrect": false
+        "text": "Roman",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Which empire ruled Rome?",
     "choices": [
       {
         "letter": "A",
-        "text": "A",
+        "text": "Greek",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "The",
-        "isCorrect": false
+        "text": "Roman",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "An",
-        "isCorrect": true
+        "text": "Byzantine",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "No",
+        "text": "Persian",
         "isCorrect": false
       }
     ]
@@ -812,53 +812,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word is a noun?",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "Run",
+        "text": "Adams",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Happy",
+        "text": "Lincoln",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Apple",
-        "isCorrect": true
-      },
-      {
-        "letter": "D",
-        "text": "Quick",
-        "isCorrect": false
-      }
-    ]
-  },
-  {
-    "level": 2,
-    "difficulty": "Easy",
-    "questionText": "Which word rhymes with 'cat'?",
-    "choices": [
-      {
-        "letter": "A",
-        "text": "Dog",
-        "isCorrect": false
-      },
-      {
-        "letter": "B",
-        "text": "Mat",
+        "text": "Washington",
         "isCorrect": true
-      },
-      {
-        "letter": "C",
-        "text": "Hat",
-        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Run",
+        "text": "Jefferson",
         "isCorrect": false
       }
     ]
@@ -866,53 +839,53 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word rhymes with 'cat'?",
+    "questionText": "Which war ended in 1945?",
     "choices": [
       {
         "letter": "A",
-        "text": "Run",
+        "text": "Cold War",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Hat",
+        "text": "Vietnam War",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Dog",
-        "isCorrect": false
+        "text": "WWII",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Mat",
-        "isCorrect": true
+        "text": "WWI",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "The",
+        "text": "Jefferson",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "An",
+        "text": "Washington",
         "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "No",
+        "text": "Lincoln",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "A",
+        "text": "Adams",
         "isCorrect": false
       }
     ]
@@ -920,80 +893,80 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "A",
-        "isCorrect": false
+        "text": "Washington",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "No",
+        "text": "Jefferson",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "The",
+        "text": "Adams",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "An",
-        "isCorrect": true
+        "text": "Lincoln",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the opposite of 'hot'?",
+    "questionText": "Which war ended in 1945?",
     "choices": [
       {
         "letter": "A",
-        "text": "Cool",
+        "text": "WWI",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Heat",
-        "isCorrect": false
+        "text": "WWII",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Warm",
+        "text": "Vietnam War",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Cold",
-        "isCorrect": true
+        "text": "Cold War",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Which war ended in 1945?",
     "choices": [
       {
         "letter": "A",
-        "text": "The",
+        "text": "Vietnam War",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "An",
+        "text": "WWII",
         "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "No",
+        "text": "WWI",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "A",
+        "text": "Cold War",
         "isCorrect": false
       }
     ]
@@ -1001,26 +974,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word rhymes with 'cat'?",
+    "questionText": "Which empire ruled Rome?",
     "choices": [
       {
         "letter": "A",
-        "text": "Mat",
+        "text": "Roman",
         "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Hat",
+        "text": "Persian",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Run",
+        "text": "Greek",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Dog",
+        "text": "Byzantine",
         "isCorrect": false
       }
     ]
@@ -1028,26 +1001,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the plural of 'child'?",
+    "questionText": "Who discovered America?",
     "choices": [
       {
         "letter": "A",
-        "text": "Childs",
+        "text": "Magellan",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Childes",
-        "isCorrect": false
+        "text": "Columbus",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Children",
-        "isCorrect": true
+        "text": "Drake",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Child",
+        "text": "Cook",
         "isCorrect": false
       }
     ]
@@ -1055,53 +1028,53 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the opposite of 'hot'?",
+    "questionText": "Who discovered America?",
     "choices": [
       {
         "letter": "A",
-        "text": "Heat",
+        "text": "Cook",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Cool",
+        "text": "Magellan",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Cold",
-        "isCorrect": true
+        "text": "Drake",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Warm",
-        "isCorrect": false
+        "text": "Columbus",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "An",
-        "isCorrect": true
+        "text": "Greeks",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "No",
-        "isCorrect": false
+        "text": "Egyptians",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "The",
+        "text": "Aztecs",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "A",
+        "text": "Romans",
         "isCorrect": false
       }
     ]
@@ -1109,26 +1082,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the plural of 'child'?",
+    "questionText": "Who discovered America?",
     "choices": [
       {
         "letter": "A",
-        "text": "Child",
+        "text": "Cook",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Childes",
+        "text": "Drake",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Childs",
+        "text": "Magellan",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Children",
+        "text": "Columbus",
         "isCorrect": true
       }
     ]
@@ -1136,26 +1109,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the plural of 'child'?",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "Child",
-        "isCorrect": false
+        "text": "Egyptians",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Children",
-        "isCorrect": true
+        "text": "Aztecs",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Childs",
+        "text": "Romans",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Childes",
+        "text": "Greeks",
         "isCorrect": false
       }
     ]
@@ -1163,26 +1136,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word rhymes with 'cat'?",
+    "questionText": "Which war ended in 1945?",
     "choices": [
       {
         "letter": "A",
-        "text": "Hat",
+        "text": "Vietnam War",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Run",
-        "isCorrect": false
+        "text": "WWII",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Mat",
-        "isCorrect": true
+        "text": "WWI",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Dog",
+        "text": "Cold War",
         "isCorrect": false
       }
     ]
@@ -1190,53 +1163,53 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the plural of 'child'?",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "Children",
-        "isCorrect": true
+        "text": "Greeks",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Child",
+        "text": "Aztecs",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Childs",
+        "text": "Romans",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Childes",
-        "isCorrect": false
+        "text": "Egyptians",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word rhymes with 'cat'?",
+    "questionText": "Which war ended in 1945?",
     "choices": [
       {
         "letter": "A",
-        "text": "Hat",
+        "text": "Vietnam War",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Dog",
+        "text": "WWI",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Mat",
+        "text": "WWII",
         "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Run",
+        "text": "Cold War",
         "isCorrect": false
       }
     ]
@@ -1244,26 +1217,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word is a noun?",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "Happy",
-        "isCorrect": false
+        "text": "Washington",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Run",
+        "text": "Lincoln",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Apple",
-        "isCorrect": true
+        "text": "Adams",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Quick",
+        "text": "Jefferson",
         "isCorrect": false
       }
     ]
@@ -1271,53 +1244,53 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word rhymes with 'cat'?",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "Hat",
+        "text": "Jefferson",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Run",
+        "text": "Lincoln",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Dog",
-        "isCorrect": false
+        "text": "Washington",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Mat",
-        "isCorrect": true
+        "text": "Adams",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word is a noun?",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "Happy",
-        "isCorrect": false
+        "text": "Egyptians",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Apple",
-        "isCorrect": true
+        "text": "Greeks",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Quick",
+        "text": "Romans",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Run",
+        "text": "Aztecs",
         "isCorrect": false
       }
     ]
@@ -1325,26 +1298,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the opposite of 'hot'?",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "Cold",
-        "isCorrect": true
+        "text": "Jefferson",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Cool",
-        "isCorrect": false
+        "text": "Washington",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Warm",
+        "text": "Adams",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Heat",
+        "text": "Lincoln",
         "isCorrect": false
       }
     ]
@@ -1352,53 +1325,53 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the opposite of 'hot'?",
+    "questionText": "Which war ended in 1945?",
     "choices": [
       {
         "letter": "A",
-        "text": "Cool",
+        "text": "Vietnam War",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Heat",
-        "isCorrect": false
+        "text": "WWII",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Warm",
+        "text": "WWI",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Cold",
-        "isCorrect": true
+        "text": "Cold War",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word rhymes with 'cat'?",
+    "questionText": "Who discovered America?",
     "choices": [
       {
         "letter": "A",
-        "text": "Run",
-        "isCorrect": false
+        "text": "Columbus",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Mat",
-        "isCorrect": true
+        "text": "Drake",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Dog",
+        "text": "Cook",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Hat",
+        "text": "Magellan",
         "isCorrect": false
       }
     ]
@@ -1406,26 +1379,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the opposite of 'hot'?",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "Warm",
+        "text": "Jefferson",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Cold",
-        "isCorrect": true
+        "text": "Lincoln",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Cool",
-        "isCorrect": false
+        "text": "Washington",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Heat",
+        "text": "Adams",
         "isCorrect": false
       }
     ]
@@ -1433,26 +1406,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Which war ended in 1945?",
     "choices": [
       {
         "letter": "A",
-        "text": "The",
+        "text": "Vietnam War",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "A",
+        "text": "Cold War",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "An",
+        "text": "WWII",
         "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "No",
+        "text": "WWI",
         "isCorrect": false
       }
     ]
@@ -1460,53 +1433,53 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word is a noun?",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "Quick",
-        "isCorrect": false
+        "text": "Egyptians",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Run",
+        "text": "Greeks",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Happy",
+        "text": "Aztecs",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Apple",
-        "isCorrect": true
+        "text": "Romans",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word rhymes with 'cat'?",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "Mat",
-        "isCorrect": true
+        "text": "Aztecs",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Dog",
+        "text": "Greeks",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Run",
-        "isCorrect": false
+        "text": "Egyptians",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Hat",
+        "text": "Romans",
         "isCorrect": false
       }
     ]
@@ -1514,53 +1487,53 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the plural of 'child'?",
+    "questionText": "Which empire ruled Rome?",
     "choices": [
       {
         "letter": "A",
-        "text": "Children",
-        "isCorrect": true
+        "text": "Persian",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Childs",
+        "text": "Byzantine",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Childes",
+        "text": "Greek",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Child",
-        "isCorrect": false
+        "text": "Roman",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the opposite of 'hot'?",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "Warm",
+        "text": "Jefferson",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Cold",
+        "text": "Washington",
         "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Cool",
+        "text": "Adams",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Heat",
+        "text": "Lincoln",
         "isCorrect": false
       }
     ]
@@ -1568,26 +1541,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the opposite of 'hot'?",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "Cool",
+        "text": "Greeks",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Heat",
-        "isCorrect": false
+        "text": "Egyptians",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Cold",
-        "isCorrect": true
+        "text": "Aztecs",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Warm",
+        "text": "Romans",
         "isCorrect": false
       }
     ]
@@ -1595,26 +1568,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the plural of 'child'?",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "Childes",
+        "text": "Aztecs",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Child",
+        "text": "Greeks",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Children",
+        "text": "Egyptians",
         "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Childs",
+        "text": "Romans",
         "isCorrect": false
       }
     ]
@@ -1622,26 +1595,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word rhymes with 'cat'?",
+    "questionText": "Which empire ruled Rome?",
     "choices": [
       {
         "letter": "A",
-        "text": "Run",
-        "isCorrect": false
+        "text": "Roman",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Mat",
-        "isCorrect": true
+        "text": "Persian",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Hat",
+        "text": "Byzantine",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Dog",
+        "text": "Greek",
         "isCorrect": false
       }
     ]
@@ -1649,80 +1622,80 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word rhymes with 'cat'?",
+    "questionText": "Which empire ruled Rome?",
     "choices": [
       {
         "letter": "A",
-        "text": "Run",
+        "text": "Byzantine",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Dog",
+        "text": "Greek",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Hat",
-        "isCorrect": false
+        "text": "Roman",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Mat",
-        "isCorrect": true
+        "text": "Persian",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the opposite of 'hot'?",
+    "questionText": "Which empire ruled Rome?",
     "choices": [
       {
         "letter": "A",
-        "text": "Warm",
+        "text": "Byzantine",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Cool",
+        "text": "Greek",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Heat",
-        "isCorrect": false
+        "text": "Roman",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Cold",
-        "isCorrect": true
+        "text": "Persian",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the plural of 'child'?",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "Childes",
-        "isCorrect": false
+        "text": "Egyptians",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Childs",
+        "text": "Greeks",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Children",
-        "isCorrect": true
+        "text": "Romans",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Child",
+        "text": "Aztecs",
         "isCorrect": false
       }
     ]
@@ -1730,26 +1703,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the plural of 'child'?",
+    "questionText": "Who discovered America?",
     "choices": [
       {
         "letter": "A",
-        "text": "Child",
-        "isCorrect": false
+        "text": "Columbus",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Children",
-        "isCorrect": true
+        "text": "Drake",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Childes",
+        "text": "Magellan",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Childs",
+        "text": "Cook",
         "isCorrect": false
       }
     ]
@@ -1757,53 +1730,53 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word rhymes with 'cat'?",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "Hat",
+        "text": "Jefferson",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Run",
+        "text": "Lincoln",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Dog",
-        "isCorrect": false
+        "text": "Washington",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Mat",
-        "isCorrect": true
+        "text": "Adams",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word rhymes with 'cat'?",
+    "questionText": "Who discovered America?",
     "choices": [
       {
         "letter": "A",
-        "text": "Dog",
+        "text": "Cook",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Run",
+        "text": "Magellan",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Mat",
+        "text": "Columbus",
         "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Hat",
+        "text": "Drake",
         "isCorrect": false
       }
     ]
@@ -1811,26 +1784,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the opposite of 'hot'?",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "Cool",
-        "isCorrect": false
+        "text": "Egyptians",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Cold",
-        "isCorrect": true
+        "text": "Aztecs",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Heat",
+        "text": "Greeks",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Warm",
+        "text": "Romans",
         "isCorrect": false
       }
     ]
@@ -1838,26 +1811,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the opposite of 'hot'?",
+    "questionText": "Which empire ruled Rome?",
     "choices": [
       {
         "letter": "A",
-        "text": "Cool",
+        "text": "Greek",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Warm",
+        "text": "Byzantine",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Cold",
+        "text": "Roman",
         "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Heat",
+        "text": "Persian",
         "isCorrect": false
       }
     ]
@@ -1865,26 +1838,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the plural of 'child'?",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "Children",
+        "text": "Washington",
         "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Childes",
+        "text": "Lincoln",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Child",
+        "text": "Adams",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Childs",
+        "text": "Jefferson",
         "isCorrect": false
       }
     ]
@@ -1892,80 +1865,80 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the opposite of 'hot'?",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "Heat",
-        "isCorrect": false
+        "text": "Egyptians",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Cool",
+        "text": "Aztecs",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Warm",
+        "text": "Romans",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Cold",
-        "isCorrect": true
+        "text": "Greeks",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "An",
-        "isCorrect": true
+        "text": "Jefferson",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "No",
+        "text": "Adams",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "The",
+        "text": "Lincoln",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "A",
-        "isCorrect": false
+        "text": "Washington",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word rhymes with 'cat'?",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "Mat",
-        "isCorrect": true
+        "text": "Romans",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Hat",
+        "text": "Aztecs",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Run",
-        "isCorrect": false
+        "text": "Egyptians",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Dog",
+        "text": "Greeks",
         "isCorrect": false
       }
     ]
@@ -1973,80 +1946,80 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word is a noun?",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "Apple",
-        "isCorrect": true
+        "text": "Jefferson",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Happy",
+        "text": "Adams",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Quick",
+        "text": "Lincoln",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Run",
-        "isCorrect": false
+        "text": "Washington",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "An",
-        "isCorrect": true
+        "text": "Greeks",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "A",
+        "text": "Aztecs",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "No",
+        "text": "Romans",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "The",
-        "isCorrect": false
+        "text": "Egyptians",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word is a noun?",
+    "questionText": "Which war ended in 1945?",
     "choices": [
       {
         "letter": "A",
-        "text": "Happy",
+        "text": "WWI",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Apple",
+        "text": "WWII",
         "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Quick",
+        "text": "Vietnam War",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Run",
+        "text": "Cold War",
         "isCorrect": false
       }
     ]
@@ -2054,26 +2027,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Who discovered America?",
     "choices": [
       {
         "letter": "A",
-        "text": "An",
+        "text": "Columbus",
         "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "The",
+        "text": "Cook",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "A",
+        "text": "Magellan",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "No",
+        "text": "Drake",
         "isCorrect": false
       }
     ]
@@ -2081,26 +2054,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the opposite of 'hot'?",
+    "questionText": "Which empire ruled Rome?",
     "choices": [
       {
         "letter": "A",
-        "text": "Cold",
-        "isCorrect": true
+        "text": "Greek",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Cool",
+        "text": "Persian",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Heat",
-        "isCorrect": false
+        "text": "Roman",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Warm",
+        "text": "Byzantine",
         "isCorrect": false
       }
     ]
@@ -2108,26 +2081,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word is a noun?",
+    "questionText": "Who discovered America?",
     "choices": [
       {
         "letter": "A",
-        "text": "Apple",
-        "isCorrect": true
+        "text": "Cook",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Happy",
-        "isCorrect": false
+        "text": "Columbus",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Run",
+        "text": "Magellan",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Quick",
+        "text": "Drake",
         "isCorrect": false
       }
     ]
@@ -2135,26 +2108,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "An",
-        "isCorrect": true
+        "text": "Romans",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "A",
+        "text": "Aztecs",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "No",
-        "isCorrect": false
+        "text": "Egyptians",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "The",
+        "text": "Greeks",
         "isCorrect": false
       }
     ]
@@ -2162,80 +2135,80 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the plural of 'child'?",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "Childes",
-        "isCorrect": false
+        "text": "Egyptians",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Child",
+        "text": "Romans",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Childs",
+        "text": "Greeks",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Children",
-        "isCorrect": true
+        "text": "Aztecs",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "A",
+        "text": "Jefferson",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "The",
-        "isCorrect": false
+        "text": "Washington",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "No",
+        "text": "Adams",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "An",
-        "isCorrect": true
+        "text": "Lincoln",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the opposite of 'hot'?",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "Heat",
+        "text": "Lincoln",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Cold",
+        "text": "Washington",
         "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Cool",
+        "text": "Jefferson",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Warm",
+        "text": "Adams",
         "isCorrect": false
       }
     ]
@@ -2243,26 +2216,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the plural of 'child'?",
+    "questionText": "Which empire ruled Rome?",
     "choices": [
       {
         "letter": "A",
-        "text": "Children",
-        "isCorrect": true
+        "text": "Greek",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Childes",
+        "text": "Persian",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Child",
-        "isCorrect": false
+        "text": "Roman",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Childs",
+        "text": "Byzantine",
         "isCorrect": false
       }
     ]
@@ -2270,26 +2243,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word is a noun?",
+    "questionText": "Which empire ruled Rome?",
     "choices": [
       {
         "letter": "A",
-        "text": "Happy",
-        "isCorrect": false
+        "text": "Roman",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Apple",
-        "isCorrect": true
+        "text": "Greek",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Run",
+        "text": "Byzantine",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Quick",
+        "text": "Persian",
         "isCorrect": false
       }
     ]
@@ -2297,53 +2270,53 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word is a noun?",
+    "questionText": "Which war ended in 1945?",
     "choices": [
       {
         "letter": "A",
-        "text": "Quick",
+        "text": "WWI",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Apple",
-        "isCorrect": true
+        "text": "Vietnam War",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Run",
+        "text": "Cold War",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Happy",
-        "isCorrect": false
+        "text": "WWII",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the plural of 'child'?",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "Child",
+        "text": "Romans",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Childes",
+        "text": "Aztecs",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Childs",
+        "text": "Greeks",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Children",
+        "text": "Egyptians",
         "isCorrect": true
       }
     ]
@@ -2351,53 +2324,53 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word is a noun?",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "Run",
+        "text": "Jefferson",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Quick",
+        "text": "Lincoln",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Apple",
-        "isCorrect": true
+        "text": "Adams",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Happy",
-        "isCorrect": false
+        "text": "Washington",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the opposite of 'hot'?",
+    "questionText": "Which war ended in 1945?",
     "choices": [
       {
         "letter": "A",
-        "text": "Warm",
+        "text": "Cold War",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Cool",
+        "text": "Vietnam War",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Heat",
+        "text": "WWI",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Cold",
+        "text": "WWII",
         "isCorrect": true
       }
     ]
@@ -2405,53 +2378,53 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Who discovered America?",
     "choices": [
       {
         "letter": "A",
-        "text": "An",
-        "isCorrect": true
+        "text": "Cook",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "The",
+        "text": "Drake",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "A",
+        "text": "Magellan",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "No",
-        "isCorrect": false
+        "text": "Columbus",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "The",
-        "isCorrect": false
+        "text": "Egyptians",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "An",
-        "isCorrect": true
+        "text": "Aztecs",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "No",
+        "text": "Romans",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "A",
+        "text": "Greeks",
         "isCorrect": false
       }
     ]
@@ -2459,26 +2432,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "A",
+        "text": "Adams",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "An",
+        "text": "Washington",
         "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "No",
+        "text": "Lincoln",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "The",
+        "text": "Jefferson",
         "isCorrect": false
       }
     ]
@@ -2486,26 +2459,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word rhymes with 'cat'?",
+    "questionText": "Which empire ruled Rome?",
     "choices": [
       {
         "letter": "A",
-        "text": "Dog",
-        "isCorrect": false
+        "text": "Roman",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Mat",
-        "isCorrect": true
+        "text": "Byzantine",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Run",
+        "text": "Greek",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Hat",
+        "text": "Persian",
         "isCorrect": false
       }
     ]
@@ -2513,26 +2486,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the plural of 'child'?",
+    "questionText": "Which empire ruled Rome?",
     "choices": [
       {
         "letter": "A",
-        "text": "Childes",
+        "text": "Byzantine",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Childs",
-        "isCorrect": false
+        "text": "Roman",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Children",
-        "isCorrect": true
+        "text": "Greek",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Child",
+        "text": "Persian",
         "isCorrect": false
       }
     ]
@@ -2540,26 +2513,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the opposite of 'hot'?",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "Warm",
+        "text": "Adams",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Heat",
+        "text": "Lincoln",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Cool",
+        "text": "Jefferson",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Cold",
+        "text": "Washington",
         "isCorrect": true
       }
     ]
@@ -2567,26 +2540,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "The",
+        "text": "Lincoln",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "A",
+        "text": "Jefferson",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "An",
+        "text": "Washington",
         "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "No",
+        "text": "Adams",
         "isCorrect": false
       }
     ]
@@ -2594,26 +2567,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the opposite of 'hot'?",
+    "questionText": "Who was the first President of the USA?",
     "choices": [
       {
         "letter": "A",
-        "text": "Heat",
+        "text": "Jefferson",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Cool",
+        "text": "Lincoln",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Warm",
+        "text": "Adams",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Cold",
+        "text": "Washington",
         "isCorrect": true
       }
     ]
@@ -2621,26 +2594,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "What is the plural of 'child'?",
+    "questionText": "Which civilization built pyramids?",
     "choices": [
       {
         "letter": "A",
-        "text": "Childs",
+        "text": "Greeks",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Childes",
+        "text": "Romans",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Child",
+        "text": "Aztecs",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Children",
+        "text": "Egyptians",
         "isCorrect": true
       }
     ]
@@ -2648,26 +2621,26 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Which word is a noun?",
+    "questionText": "Which empire ruled Rome?",
     "choices": [
       {
         "letter": "A",
-        "text": "Happy",
-        "isCorrect": false
+        "text": "Roman",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Apple",
-        "isCorrect": true
+        "text": "Byzantine",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Quick",
+        "text": "Greek",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Run",
+        "text": "Persian",
         "isCorrect": false
       }
     ]
@@ -2675,80 +2648,80 @@
   {
     "level": 2,
     "difficulty": "Easy",
-    "questionText": "Choose the correct article: ___ apple",
+    "questionText": "Who discovered America?",
     "choices": [
       {
         "letter": "A",
-        "text": "No",
+        "text": "Cook",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "An",
-        "isCorrect": true
+        "text": "Drake",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "The",
-        "isCorrect": false
+        "text": "Columbus",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "A",
+        "text": "Magellan",
         "isCorrect": false
       }
     ]
   },
   {
-    "level": 1,
-    "difficulty": "Hard",
-    "questionText": "Choose the sentence with correct punctuation.",
+    "level": 2,
+    "difficulty": "Easy",
+    "questionText": "Who discovered America?",
     "choices": [
       {
         "letter": "A",
-        "text": "Its' raining today.",
+        "text": "Drake",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Its raining, today.",
+        "text": "Cook",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Its raining today.",
-        "isCorrect": false
+        "text": "Columbus",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "It's raining today.",
-        "isCorrect": true
+        "text": "Magellan",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "What triggered WWI?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swam",
+        "text": "Pearl Harbor",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Swim",
+        "text": "D-Day",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Swimming",
+        "text": "Assassination of Archduke Ferdinand",
         "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Swims",
+        "text": "Treaty of Versailles",
         "isCorrect": false
       }
     ]
@@ -2756,80 +2729,80 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Which sentence is in passive voice?",
+    "questionText": "What triggered WWI?",
     "choices": [
       {
         "letter": "A",
-        "text": "The dog is chasing the cat.",
+        "text": "Pearl Harbor",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "The cat was chased by the dog.",
-        "isCorrect": true
+        "text": "D-Day",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "The cat chases the dog.",
+        "text": "Treaty of Versailles",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "The dog chased the cat.",
-        "isCorrect": false
+        "text": "Assassination of Archduke Ferdinand",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "What triggered WWI?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swam",
+        "text": "Pearl Harbor",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Swims",
-        "isCorrect": false
+        "text": "Assassination of Archduke Ferdinand",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Swim",
+        "text": "D-Day",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Swimming",
-        "isCorrect": true
+        "text": "Treaty of Versailles",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Identify the subjunctive verb: 'If I ___ you, I\u2019d leave.'",
+    "questionText": "Who wrote the Communist Manifesto?",
     "choices": [
       {
         "letter": "A",
-        "text": "am",
+        "text": "Lenin",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "be",
-        "isCorrect": false
+        "text": "Marx",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "were",
-        "isCorrect": true
+        "text": "Engels",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "was",
+        "text": "Stalin",
         "isCorrect": false
       }
     ]
@@ -2837,53 +2810,53 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "Who wrote the Communist Manifesto?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swim",
-        "isCorrect": false
+        "text": "Marx",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Swam",
+        "text": "Lenin",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Swims",
+        "text": "Stalin",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Swimming",
-        "isCorrect": true
+        "text": "Engels",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "What triggered WWI?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swim",
-        "isCorrect": false
+        "text": "Assassination of Archduke Ferdinand",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Swimming",
-        "isCorrect": true
+        "text": "Pearl Harbor",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Swam",
+        "text": "D-Day",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Swims",
+        "text": "Treaty of Versailles",
         "isCorrect": false
       }
     ]
@@ -2891,26 +2864,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "Who led India to independence?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swims",
+        "text": "Nehru",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Swam",
-        "isCorrect": false
+        "text": "Gandhi",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Swimming",
-        "isCorrect": true
+        "text": "Patel",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Swim",
+        "text": "Bose",
         "isCorrect": false
       }
     ]
@@ -2918,26 +2891,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Choose the sentence with correct punctuation.",
+    "questionText": "What triggered WWI?",
     "choices": [
       {
         "letter": "A",
-        "text": "It's raining today.",
-        "isCorrect": true
+        "text": "Treaty of Versailles",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Its raining, today.",
-        "isCorrect": false
+        "text": "Assassination of Archduke Ferdinand",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Its' raining today.",
+        "text": "D-Day",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Its raining today.",
+        "text": "Pearl Harbor",
         "isCorrect": false
       }
     ]
@@ -2945,53 +2918,53 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Which sentence is in passive voice?",
+    "questionText": "What was the Cold War?",
     "choices": [
       {
         "letter": "A",
-        "text": "The cat chases the dog.",
+        "text": "A war between Korea and Japan",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "The dog is chasing the cat.",
-        "isCorrect": false
+        "text": "A conflict between USSR and USA",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "The dog chased the cat.",
+        "text": "A civil war",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "The cat was chased by the dog.",
-        "isCorrect": true
+        "text": "A war fought in winter",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Choose the sentence with correct punctuation.",
+    "questionText": "Who wrote the Communist Manifesto?",
     "choices": [
       {
         "letter": "A",
-        "text": "Its raining today.",
+        "text": "Stalin",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Its' raining today.",
+        "text": "Engels",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Its raining, today.",
+        "text": "Lenin",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "It's raining today.",
+        "text": "Marx",
         "isCorrect": true
       }
     ]
@@ -2999,107 +2972,107 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Identify the subjunctive verb: 'If I ___ you, I\u2019d leave.'",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "were",
-        "isCorrect": true
+        "text": "1776",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "be",
+        "text": "1812",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "was",
+        "text": "1804",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "am",
-        "isCorrect": false
+        "text": "1789",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "Who wrote the Communist Manifesto?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swims",
+        "text": "Engels",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Swim",
+        "text": "Stalin",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Swimming",
-        "isCorrect": true
+        "text": "Lenin",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Swam",
-        "isCorrect": false
+        "text": "Marx",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Which sentence is in passive voice?",
+    "questionText": "Who led India to independence?",
     "choices": [
       {
         "letter": "A",
-        "text": "The cat was chased by the dog.",
-        "isCorrect": true
+        "text": "Bose",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "The dog chased the cat.",
+        "text": "Patel",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "The dog is chasing the cat.",
+        "text": "Nehru",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "The cat chases the dog.",
-        "isCorrect": false
+        "text": "Gandhi",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Identify the subjunctive verb: 'If I ___ you, I\u2019d leave.'",
+    "questionText": "What was the Cold War?",
     "choices": [
       {
         "letter": "A",
-        "text": "was",
+        "text": "A war fought in winter",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "were",
+        "text": "A conflict between USSR and USA",
         "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "am",
+        "text": "A war between Korea and Japan",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "be",
+        "text": "A civil war",
         "isCorrect": false
       }
     ]
@@ -3107,26 +3080,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is the past participle of 'write'?",
+    "questionText": "What triggered WWI?",
     "choices": [
       {
         "letter": "A",
-        "text": "Written",
-        "isCorrect": true
+        "text": "D-Day",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Wrote",
+        "text": "Treaty of Versailles",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Writing",
-        "isCorrect": false
+        "text": "Assassination of Archduke Ferdinand",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Write",
+        "text": "Pearl Harbor",
         "isCorrect": false
       }
     ]
@@ -3134,107 +3107,107 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Identify the subjunctive verb: 'If I ___ you, I\u2019d leave.'",
+    "questionText": "Who led India to independence?",
     "choices": [
       {
         "letter": "A",
-        "text": "am",
-        "isCorrect": false
+        "text": "Gandhi",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "be",
+        "text": "Patel",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "was",
+        "text": "Bose",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "were",
-        "isCorrect": true
+        "text": "Nehru",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Identify the subjunctive verb: 'If I ___ you, I\u2019d leave.'",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "were",
-        "isCorrect": true
+        "text": "1804",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "be",
+        "text": "1776",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "am",
+        "text": "1812",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "was",
-        "isCorrect": false
+        "text": "1789",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Choose the sentence with correct punctuation.",
+    "questionText": "What triggered WWI?",
     "choices": [
       {
         "letter": "A",
-        "text": "It's raining today.",
-        "isCorrect": true
+        "text": "D-Day",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Its raining, today.",
+        "text": "Pearl Harbor",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Its' raining today.",
+        "text": "Treaty of Versailles",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Its raining today.",
-        "isCorrect": false
+        "text": "Assassination of Archduke Ferdinand",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Identify the subjunctive verb: 'If I ___ you, I\u2019d leave.'",
+    "questionText": "Who wrote the Communist Manifesto?",
     "choices": [
       {
         "letter": "A",
-        "text": "was",
-        "isCorrect": false
+        "text": "Marx",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "be",
+        "text": "Stalin",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "were",
-        "isCorrect": true
+        "text": "Lenin",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "am",
+        "text": "Engels",
         "isCorrect": false
       }
     ]
@@ -3242,53 +3215,53 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is the past participle of 'write'?",
+    "questionText": "Who wrote the Communist Manifesto?",
     "choices": [
       {
         "letter": "A",
-        "text": "Wrote",
+        "text": "Engels",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Write",
+        "text": "Lenin",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Written",
-        "isCorrect": true
+        "text": "Stalin",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Writing",
-        "isCorrect": false
+        "text": "Marx",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Which sentence is in passive voice?",
+    "questionText": "What triggered WWI?",
     "choices": [
       {
         "letter": "A",
-        "text": "The cat was chased by the dog.",
-        "isCorrect": true
+        "text": "Pearl Harbor",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "The dog chased the cat.",
-        "isCorrect": false
+        "text": "Assassination of Archduke Ferdinand",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "The cat chases the dog.",
+        "text": "D-Day",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "The dog is chasing the cat.",
+        "text": "Treaty of Versailles",
         "isCorrect": false
       }
     ]
@@ -3296,26 +3269,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Choose the sentence with correct punctuation.",
+    "questionText": "What triggered WWI?",
     "choices": [
       {
         "letter": "A",
-        "text": "Its' raining today.",
+        "text": "D-Day",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Its raining, today.",
+        "text": "Pearl Harbor",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Its raining today.",
+        "text": "Treaty of Versailles",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "It's raining today.",
+        "text": "Assassination of Archduke Ferdinand",
         "isCorrect": true
       }
     ]
@@ -3323,53 +3296,53 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Which sentence is in passive voice?",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "The dog chased the cat.",
+        "text": "1812",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "The cat chases the dog.",
+        "text": "1804",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "The cat was chased by the dog.",
-        "isCorrect": true
+        "text": "1776",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "The dog is chasing the cat.",
-        "isCorrect": false
+        "text": "1789",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Which sentence is in passive voice?",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "The dog is chasing the cat.",
-        "isCorrect": false
+        "text": "1789",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "The cat was chased by the dog.",
-        "isCorrect": true
+        "text": "1804",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "The dog chased the cat.",
+        "text": "1812",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "The cat chases the dog.",
+        "text": "1776",
         "isCorrect": false
       }
     ]
@@ -3377,26 +3350,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Choose the sentence with correct punctuation.",
+    "questionText": "Who wrote the Communist Manifesto?",
     "choices": [
       {
         "letter": "A",
-        "text": "It's raining today.",
+        "text": "Marx",
         "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Its raining, today.",
+        "text": "Lenin",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Its' raining today.",
+        "text": "Stalin",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Its raining today.",
+        "text": "Engels",
         "isCorrect": false
       }
     ]
@@ -3404,26 +3377,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "Who led India to independence?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swam",
+        "text": "Nehru",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Swimming",
+        "text": "Gandhi",
         "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Swim",
+        "text": "Bose",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Swims",
+        "text": "Patel",
         "isCorrect": false
       }
     ]
@@ -3431,53 +3404,53 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Which sentence is in passive voice?",
+    "questionText": "Who led India to independence?",
     "choices": [
       {
         "letter": "A",
-        "text": "The cat chases the dog.",
+        "text": "Nehru",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "The dog chased the cat.",
+        "text": "Bose",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "The cat was chased by the dog.",
-        "isCorrect": true
+        "text": "Patel",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "The dog is chasing the cat.",
-        "isCorrect": false
+        "text": "Gandhi",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is the past participle of 'write'?",
+    "questionText": "Who wrote the Communist Manifesto?",
     "choices": [
       {
         "letter": "A",
-        "text": "Wrote",
+        "text": "Stalin",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Writing",
+        "text": "Lenin",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Written",
+        "text": "Marx",
         "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Write",
+        "text": "Engels",
         "isCorrect": false
       }
     ]
@@ -3485,26 +3458,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Choose the sentence with correct punctuation.",
+    "questionText": "Who wrote the Communist Manifesto?",
     "choices": [
       {
         "letter": "A",
-        "text": "Its raining today.",
+        "text": "Stalin",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Its' raining today.",
-        "isCorrect": false
+        "text": "Marx",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "It's raining today.",
-        "isCorrect": true
+        "text": "Lenin",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Its raining, today.",
+        "text": "Engels",
         "isCorrect": false
       }
     ]
@@ -3512,26 +3485,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is the past participle of 'write'?",
+    "questionText": "Who led India to independence?",
     "choices": [
       {
         "letter": "A",
-        "text": "Write",
+        "text": "Bose",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Wrote",
+        "text": "Patel",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Written",
+        "text": "Gandhi",
         "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Writing",
+        "text": "Nehru",
         "isCorrect": false
       }
     ]
@@ -3539,53 +3512,53 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Identify the subjunctive verb: 'If I ___ you, I\u2019d leave.'",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "was",
+        "text": "1804",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "be",
+        "text": "1776",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "am",
-        "isCorrect": false
+        "text": "1789",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "were",
-        "isCorrect": true
+        "text": "1812",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Which sentence is in passive voice?",
+    "questionText": "What triggered WWI?",
     "choices": [
       {
         "letter": "A",
-        "text": "The cat chases the dog.",
+        "text": "Pearl Harbor",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "The dog chased the cat.",
-        "isCorrect": false
+        "text": "Assassination of Archduke Ferdinand",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "The cat was chased by the dog.",
-        "isCorrect": true
+        "text": "Treaty of Versailles",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "The dog is chasing the cat.",
+        "text": "D-Day",
         "isCorrect": false
       }
     ]
@@ -3593,26 +3566,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is the past participle of 'write'?",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "Write",
+        "text": "1812",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Writing",
+        "text": "1776",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Wrote",
+        "text": "1804",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Written",
+        "text": "1789",
         "isCorrect": true
       }
     ]
@@ -3620,26 +3593,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "What was the Cold War?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swims",
+        "text": "A war between Korea and Japan",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Swim",
+        "text": "A war fought in winter",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Swimming",
+        "text": "A conflict between USSR and USA",
         "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Swam",
+        "text": "A civil war",
         "isCorrect": false
       }
     ]
@@ -3647,26 +3620,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is the past participle of 'write'?",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "Wrote",
+        "text": "1804",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Written",
+        "text": "1789",
         "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Write",
+        "text": "1812",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Writing",
+        "text": "1776",
         "isCorrect": false
       }
     ]
@@ -3674,26 +3647,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "What triggered WWI?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swims",
-        "isCorrect": false
+        "text": "Assassination of Archduke Ferdinand",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Swim",
+        "text": "Treaty of Versailles",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Swimming",
-        "isCorrect": true
+        "text": "Pearl Harbor",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Swam",
+        "text": "D-Day",
         "isCorrect": false
       }
     ]
@@ -3701,26 +3674,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is the past participle of 'write'?",
+    "questionText": "Who led India to independence?",
     "choices": [
       {
         "letter": "A",
-        "text": "Wrote",
+        "text": "Nehru",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Write",
-        "isCorrect": false
+        "text": "Gandhi",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Written",
-        "isCorrect": true
+        "text": "Bose",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Writing",
+        "text": "Patel",
         "isCorrect": false
       }
     ]
@@ -3728,26 +3701,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swim",
+        "text": "1804",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Swam",
+        "text": "1776",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Swims",
+        "text": "1812",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Swimming",
+        "text": "1789",
         "isCorrect": true
       }
     ]
@@ -3755,26 +3728,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swim",
+        "text": "1812",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Swimming",
+        "text": "1789",
         "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Swims",
+        "text": "1776",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Swam",
+        "text": "1804",
         "isCorrect": false
       }
     ]
@@ -3782,53 +3755,53 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Identify the subjunctive verb: 'If I ___ you, I\u2019d leave.'",
+    "questionText": "Who wrote the Communist Manifesto?",
     "choices": [
       {
         "letter": "A",
-        "text": "be",
+        "text": "Lenin",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "was",
+        "text": "Stalin",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "am",
-        "isCorrect": false
+        "text": "Marx",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "were",
-        "isCorrect": true
+        "text": "Engels",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is the past participle of 'write'?",
+    "questionText": "Who wrote the Communist Manifesto?",
     "choices": [
       {
         "letter": "A",
-        "text": "Write",
+        "text": "Lenin",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Written",
+        "text": "Marx",
         "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Wrote",
+        "text": "Engels",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Writing",
+        "text": "Stalin",
         "isCorrect": false
       }
     ]
@@ -3836,26 +3809,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is the past participle of 'write'?",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "Wrote",
-        "isCorrect": false
+        "text": "1789",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Written",
-        "isCorrect": true
+        "text": "1812",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Writing",
+        "text": "1804",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Write",
+        "text": "1776",
         "isCorrect": false
       }
     ]
@@ -3863,53 +3836,53 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Which sentence is in passive voice?",
+    "questionText": "Who led India to independence?",
     "choices": [
       {
         "letter": "A",
-        "text": "The dog is chasing the cat.",
+        "text": "Nehru",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "The cat chases the dog.",
+        "text": "Bose",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "The dog chased the cat.",
-        "isCorrect": false
+        "text": "Gandhi",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "The cat was chased by the dog.",
-        "isCorrect": true
+        "text": "Patel",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "What triggered WWI?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swims",
+        "text": "Pearl Harbor",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Swam",
-        "isCorrect": false
+        "text": "Assassination of Archduke Ferdinand",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Swimming",
-        "isCorrect": true
+        "text": "Treaty of Versailles",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Swim",
+        "text": "D-Day",
         "isCorrect": false
       }
     ]
@@ -3917,53 +3890,53 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Which sentence is in passive voice?",
+    "questionText": "What was the Cold War?",
     "choices": [
       {
         "letter": "A",
-        "text": "The dog chased the cat.",
+        "text": "A civil war",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "The cat was chased by the dog.",
-        "isCorrect": true
+        "text": "A war between Korea and Japan",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "The dog is chasing the cat.",
+        "text": "A war fought in winter",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "The cat chases the dog.",
-        "isCorrect": false
+        "text": "A conflict between USSR and USA",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swam",
-        "isCorrect": false
+        "text": "1789",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Swimming",
-        "isCorrect": true
+        "text": "1812",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Swims",
+        "text": "1804",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Swim",
+        "text": "1776",
         "isCorrect": false
       }
     ]
@@ -3971,26 +3944,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is the past participle of 'write'?",
+    "questionText": "Who led India to independence?",
     "choices": [
       {
         "letter": "A",
-        "text": "Wrote",
-        "isCorrect": false
+        "text": "Gandhi",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Writing",
+        "text": "Patel",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Written",
-        "isCorrect": true
+        "text": "Bose",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Write",
+        "text": "Nehru",
         "isCorrect": false
       }
     ]
@@ -3998,26 +3971,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Identify the subjunctive verb: 'If I ___ you, I\u2019d leave.'",
+    "questionText": "Who led India to independence?",
     "choices": [
       {
         "letter": "A",
-        "text": "was",
+        "text": "Nehru",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "were",
+        "text": "Gandhi",
         "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "am",
+        "text": "Patel",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "be",
+        "text": "Bose",
         "isCorrect": false
       }
     ]
@@ -4025,53 +3998,53 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Which sentence is in passive voice?",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "The dog is chasing the cat.",
+        "text": "1812",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "The cat chases the dog.",
-        "isCorrect": false
+        "text": "1789",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "The dog chased the cat.",
+        "text": "1776",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "The cat was chased by the dog.",
-        "isCorrect": true
+        "text": "1804",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "Who wrote the Communist Manifesto?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swimming",
+        "text": "Marx",
         "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Swam",
+        "text": "Lenin",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Swims",
+        "text": "Stalin",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Swim",
+        "text": "Engels",
         "isCorrect": false
       }
     ]
@@ -4079,26 +4052,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Choose the sentence with correct punctuation.",
+    "questionText": "What was the Cold War?",
     "choices": [
       {
         "letter": "A",
-        "text": "Its raining today.",
+        "text": "A civil war",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Its' raining today.",
+        "text": "A war fought in winter",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "It's raining today.",
+        "text": "A conflict between USSR and USA",
         "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Its raining, today.",
+        "text": "A war between Korea and Japan",
         "isCorrect": false
       }
     ]
@@ -4106,53 +4079,53 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Identify the subjunctive verb: 'If I ___ you, I\u2019d leave.'",
+    "questionText": "What was the Cold War?",
     "choices": [
       {
         "letter": "A",
-        "text": "were",
-        "isCorrect": true
+        "text": "A war fought in winter",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "am",
+        "text": "A war between Korea and Japan",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "was",
+        "text": "A civil war",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "be",
-        "isCorrect": false
+        "text": "A conflict between USSR and USA",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is the past participle of 'write'?",
+    "questionText": "Who led India to independence?",
     "choices": [
       {
         "letter": "A",
-        "text": "Written",
+        "text": "Gandhi",
         "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Writing",
+        "text": "Nehru",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Write",
+        "text": "Bose",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Wrote",
+        "text": "Patel",
         "isCorrect": false
       }
     ]
@@ -4160,80 +4133,80 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swim",
+        "text": "1776",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Swims",
+        "text": "1804",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Swam",
-        "isCorrect": false
+        "text": "1789",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Swimming",
-        "isCorrect": true
+        "text": "1812",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Identify the subjunctive verb: 'If I ___ you, I\u2019d leave.'",
+    "questionText": "Who led India to independence?",
     "choices": [
       {
         "letter": "A",
-        "text": "be",
+        "text": "Patel",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "was",
+        "text": "Nehru",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "am",
-        "isCorrect": false
+        "text": "Gandhi",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "were",
-        "isCorrect": true
+        "text": "Bose",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "What triggered WWI?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swim",
+        "text": "D-Day",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Swims",
+        "text": "Pearl Harbor",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Swam",
+        "text": "Treaty of Versailles",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Swimming",
+        "text": "Assassination of Archduke Ferdinand",
         "isCorrect": true
       }
     ]
@@ -4241,26 +4214,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "What triggered WWI?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swam",
-        "isCorrect": false
+        "text": "Assassination of Archduke Ferdinand",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Swimming",
-        "isCorrect": true
+        "text": "Treaty of Versailles",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Swims",
+        "text": "D-Day",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Swim",
+        "text": "Pearl Harbor",
         "isCorrect": false
       }
     ]
@@ -4268,26 +4241,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is the past participle of 'write'?",
+    "questionText": "Who led India to independence?",
     "choices": [
       {
         "letter": "A",
-        "text": "Writing",
+        "text": "Patel",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Wrote",
+        "text": "Bose",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Written",
+        "text": "Gandhi",
         "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Write",
+        "text": "Nehru",
         "isCorrect": false
       }
     ]
@@ -4295,26 +4268,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Choose the sentence with correct punctuation.",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "Its raining, today.",
+        "text": "1812",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "It's raining today.",
+        "text": "1789",
         "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Its raining today.",
+        "text": "1776",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Its' raining today.",
+        "text": "1804",
         "isCorrect": false
       }
     ]
@@ -4322,26 +4295,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Which sentence is in passive voice?",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "The dog chased the cat.",
-        "isCorrect": false
+        "text": "1789",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "The cat was chased by the dog.",
-        "isCorrect": true
+        "text": "1776",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "The cat chases the dog.",
+        "text": "1812",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "The dog is chasing the cat.",
+        "text": "1804",
         "isCorrect": false
       }
     ]
@@ -4349,26 +4322,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Identify the subjunctive verb: 'If I ___ you, I\u2019d leave.'",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "were",
+        "text": "1789",
         "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "be",
+        "text": "1804",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "was",
+        "text": "1776",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "am",
+        "text": "1812",
         "isCorrect": false
       }
     ]
@@ -4376,26 +4349,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Choose the sentence with correct punctuation.",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "It's raining today.",
-        "isCorrect": true
+        "text": "1776",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Its' raining today.",
-        "isCorrect": false
+        "text": "1789",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Its raining today.",
+        "text": "1804",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Its raining, today.",
+        "text": "1812",
         "isCorrect": false
       }
     ]
@@ -4403,26 +4376,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is the past participle of 'write'?",
+    "questionText": "Who led India to independence?",
     "choices": [
       {
         "letter": "A",
-        "text": "Written",
-        "isCorrect": true
+        "text": "Bose",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Writing",
-        "isCorrect": false
+        "text": "Gandhi",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Wrote",
+        "text": "Nehru",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Write",
+        "text": "Patel",
         "isCorrect": false
       }
     ]
@@ -4430,26 +4403,53 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Choose the sentence with correct punctuation.",
+    "questionText": "Who wrote the Communist Manifesto?",
     "choices": [
       {
         "letter": "A",
-        "text": "It's raining today.",
-        "isCorrect": true
+        "text": "Lenin",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Its raining, today.",
+        "text": "Engels",
+        "isCorrect": false
+      },
+      {
+        "letter": "C",
+        "text": "Stalin",
+        "isCorrect": false
+      },
+      {
+        "letter": "D",
+        "text": "Marx",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "level": 1,
+    "difficulty": "Hard",
+    "questionText": "Who wrote the Communist Manifesto?",
+    "choices": [
+      {
+        "letter": "A",
+        "text": "Stalin",
         "isCorrect": false
+      },
+      {
+        "letter": "B",
+        "text": "Marx",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Its' raining today.",
+        "text": "Lenin",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Its raining today.",
+        "text": "Engels",
         "isCorrect": false
       }
     ]
@@ -4457,26 +4457,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Choose the sentence with correct punctuation.",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "It's raining today.",
+        "text": "1789",
         "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Its' raining today.",
+        "text": "1776",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Its raining today.",
+        "text": "1804",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Its raining, today.",
+        "text": "1812",
         "isCorrect": false
       }
     ]
@@ -4484,26 +4484,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Identify the subjunctive verb: 'If I ___ you, I\u2019d leave.'",
+    "questionText": "What was the Cold War?",
     "choices": [
       {
         "letter": "A",
-        "text": "be",
+        "text": "A civil war",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "were",
-        "isCorrect": true
+        "text": "A war between Korea and Japan",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "was",
-        "isCorrect": false
+        "text": "A conflict between USSR and USA",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "am",
+        "text": "A war fought in winter",
         "isCorrect": false
       }
     ]
@@ -4511,26 +4511,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Choose the sentence with correct punctuation.",
+    "questionText": "Who wrote the Communist Manifesto?",
     "choices": [
       {
         "letter": "A",
-        "text": "Its raining today.",
+        "text": "Engels",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Its' raining today.",
+        "text": "Lenin",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "It's raining today.",
+        "text": "Marx",
         "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Its raining, today.",
+        "text": "Stalin",
         "isCorrect": false
       }
     ]
@@ -4538,26 +4538,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is the past participle of 'write'?",
+    "questionText": "Who led India to independence?",
     "choices": [
       {
         "letter": "A",
-        "text": "Writing",
+        "text": "Patel",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Written",
+        "text": "Gandhi",
         "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Wrote",
+        "text": "Bose",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Write",
+        "text": "Nehru",
         "isCorrect": false
       }
     ]
@@ -4565,53 +4565,53 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is the past participle of 'write'?",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "Write",
+        "text": "1812",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Wrote",
-        "isCorrect": false
+        "text": "1789",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Writing",
+        "text": "1804",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Written",
-        "isCorrect": true
+        "text": "1776",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is the past participle of 'write'?",
+    "questionText": "What triggered WWI?",
     "choices": [
       {
         "letter": "A",
-        "text": "Written",
-        "isCorrect": true
+        "text": "Treaty of Versailles",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Write",
-        "isCorrect": false
+        "text": "Assassination of Archduke Ferdinand",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Wrote",
+        "text": "D-Day",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Writing",
+        "text": "Pearl Harbor",
         "isCorrect": false
       }
     ]
@@ -4619,26 +4619,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Identify the subjunctive verb: 'If I ___ you, I\u2019d leave.'",
+    "questionText": "Who led India to independence?",
     "choices": [
       {
         "letter": "A",
-        "text": "were",
+        "text": "Gandhi",
         "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "be",
+        "text": "Patel",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "am",
+        "text": "Nehru",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "was",
+        "text": "Bose",
         "isCorrect": false
       }
     ]
@@ -4646,26 +4646,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swims",
+        "text": "1804",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Swimming",
-        "isCorrect": true
+        "text": "1812",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Swim",
-        "isCorrect": false
+        "text": "1789",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Swam",
+        "text": "1776",
         "isCorrect": false
       }
     ]
@@ -4673,26 +4673,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Which sentence is in passive voice?",
+    "questionText": "What was the Cold War?",
     "choices": [
       {
         "letter": "A",
-        "text": "The dog is chasing the cat.",
+        "text": "A civil war",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "The dog chased the cat.",
+        "text": "A war between Korea and Japan",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "The cat was chased by the dog.",
+        "text": "A conflict between USSR and USA",
         "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "The cat chases the dog.",
+        "text": "A war fought in winter",
         "isCorrect": false
       }
     ]
@@ -4700,26 +4700,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Which sentence is in passive voice?",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "The cat was chased by the dog.",
-        "isCorrect": true
+        "text": "1804",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "The dog is chasing the cat.",
-        "isCorrect": false
+        "text": "1789",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "The dog chased the cat.",
+        "text": "1812",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "The cat chases the dog.",
+        "text": "1776",
         "isCorrect": false
       }
     ]
@@ -4727,26 +4727,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "Who led India to independence?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swam",
+        "text": "Patel",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Swimming",
+        "text": "Gandhi",
         "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Swims",
+        "text": "Bose",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Swim",
+        "text": "Nehru",
         "isCorrect": false
       }
     ]
@@ -4754,26 +4754,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is the past participle of 'write'?",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "Write",
+        "text": "1804",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Writing",
+        "text": "1812",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Wrote",
+        "text": "1776",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Written",
+        "text": "1789",
         "isCorrect": true
       }
     ]
@@ -4781,26 +4781,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Identify the subjunctive verb: 'If I ___ you, I\u2019d leave.'",
+    "questionText": "Who wrote the Communist Manifesto?",
     "choices": [
       {
         "letter": "A",
-        "text": "be",
+        "text": "Engels",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "were",
-        "isCorrect": true
+        "text": "Stalin",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "was",
-        "isCorrect": false
+        "text": "Marx",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "am",
+        "text": "Lenin",
         "isCorrect": false
       }
     ]
@@ -4808,53 +4808,53 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Choose the sentence with correct punctuation.",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "Its' raining today.",
+        "text": "1812",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "It's raining today.",
-        "isCorrect": true
+        "text": "1776",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Its raining, today.",
+        "text": "1804",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Its raining today.",
-        "isCorrect": false
+        "text": "1789",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "Who wrote the Communist Manifesto?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swimming",
-        "isCorrect": true
+        "text": "Engels",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Swim",
+        "text": "Stalin",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Swam",
-        "isCorrect": false
+        "text": "Marx",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Swims",
+        "text": "Lenin",
         "isCorrect": false
       }
     ]
@@ -4862,53 +4862,53 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Identify the subjunctive verb: 'If I ___ you, I\u2019d leave.'",
+    "questionText": "What was the Cold War?",
     "choices": [
       {
         "letter": "A",
-        "text": "am",
+        "text": "A civil war",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "was",
+        "text": "A war between Korea and Japan",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "were",
-        "isCorrect": true
+        "text": "A war fought in winter",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "be",
-        "isCorrect": false
+        "text": "A conflict between USSR and USA",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Identify the subjunctive verb: 'If I ___ you, I\u2019d leave.'",
+    "questionText": "Who wrote the Communist Manifesto?",
     "choices": [
       {
         "letter": "A",
-        "text": "was",
+        "text": "Engels",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "am",
+        "text": "Stalin",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "were",
+        "text": "Marx",
         "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "be",
+        "text": "Lenin",
         "isCorrect": false
       }
     ]
@@ -4916,26 +4916,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Choose the sentence with correct punctuation.",
+    "questionText": "Who led India to independence?",
     "choices": [
       {
         "letter": "A",
-        "text": "It's raining today.",
+        "text": "Gandhi",
         "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Its raining, today.",
+        "text": "Nehru",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Its' raining today.",
+        "text": "Bose",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Its raining today.",
+        "text": "Patel",
         "isCorrect": false
       }
     ]
@@ -4943,26 +4943,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "What triggered WWI?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swimming",
-        "isCorrect": true
+        "text": "D-Day",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Swim",
-        "isCorrect": false
+        "text": "Assassination of Archduke Ferdinand",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "Swam",
+        "text": "Treaty of Versailles",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Swims",
+        "text": "Pearl Harbor",
         "isCorrect": false
       }
     ]
@@ -4970,26 +4970,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is the past participle of 'write'?",
+    "questionText": "Who led India to independence?",
     "choices": [
       {
         "letter": "A",
-        "text": "Write",
+        "text": "Patel",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Written",
-        "isCorrect": true
+        "text": "Bose",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Wrote",
-        "isCorrect": false
+        "text": "Gandhi",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Writing",
+        "text": "Nehru",
         "isCorrect": false
       }
     ]
@@ -4997,26 +4997,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Which sentence is in passive voice?",
+    "questionText": "What triggered WWI?",
     "choices": [
       {
         "letter": "A",
-        "text": "The dog is chasing the cat.",
+        "text": "Treaty of Versailles",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "The cat was chased by the dog.",
-        "isCorrect": true
+        "text": "Pearl Harbor",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "The cat chases the dog.",
-        "isCorrect": false
+        "text": "Assassination of Archduke Ferdinand",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "The dog chased the cat.",
+        "text": "D-Day",
         "isCorrect": false
       }
     ]
@@ -5024,80 +5024,80 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "What was the Cold War?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swimming",
-        "isCorrect": true
+        "text": "A civil war",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Swims",
+        "text": "A war between Korea and Japan",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Swam",
+        "text": "A war fought in winter",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Swim",
-        "isCorrect": false
+        "text": "A conflict between USSR and USA",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Choose the sentence with correct punctuation.",
+    "questionText": "Who led India to independence?",
     "choices": [
       {
         "letter": "A",
-        "text": "Its raining, today.",
-        "isCorrect": false
+        "text": "Gandhi",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Its' raining today.",
+        "text": "Patel",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Its raining today.",
+        "text": "Nehru",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "It's raining today.",
-        "isCorrect": true
+        "text": "Bose",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Identify the subjunctive verb: 'If I ___ you, I\u2019d leave.'",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "am",
+        "text": "1804",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "be",
-        "isCorrect": false
+        "text": "1789",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "were",
-        "isCorrect": true
+        "text": "1812",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "was",
+        "text": "1776",
         "isCorrect": false
       }
     ]
@@ -5105,53 +5105,53 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "Who led India to independence?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swim",
-        "isCorrect": false
+        "text": "Gandhi",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Swims",
+        "text": "Bose",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Swam",
+        "text": "Patel",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Swimming",
-        "isCorrect": true
+        "text": "Nehru",
+        "isCorrect": false
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Identify the subjunctive verb: 'If I ___ you, I\u2019d leave.'",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "be",
+        "text": "1804",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "am",
+        "text": "1776",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "was",
+        "text": "1812",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "were",
+        "text": "1789",
         "isCorrect": true
       }
     ]
@@ -5159,26 +5159,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is an example of a gerund?",
+    "questionText": "When did the French Revolution begin?",
     "choices": [
       {
         "letter": "A",
-        "text": "Swim",
-        "isCorrect": false
+        "text": "1789",
+        "isCorrect": true
       },
       {
         "letter": "B",
-        "text": "Swimming",
-        "isCorrect": true
+        "text": "1804",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Swam",
+        "text": "1776",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "Swims",
+        "text": "1812",
         "isCorrect": false
       }
     ]
@@ -5186,26 +5186,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Choose the sentence with correct punctuation.",
+    "questionText": "What triggered WWI?",
     "choices": [
       {
         "letter": "A",
-        "text": "Its raining, today.",
+        "text": "Treaty of Versailles",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "It's raining today.",
-        "isCorrect": true
+        "text": "Pearl Harbor",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Its raining today.",
-        "isCorrect": false
+        "text": "Assassination of Archduke Ferdinand",
+        "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Its' raining today.",
+        "text": "D-Day",
         "isCorrect": false
       }
     ]
@@ -5213,53 +5213,53 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Which sentence is in passive voice?",
+    "questionText": "Who wrote the Communist Manifesto?",
     "choices": [
       {
         "letter": "A",
-        "text": "The cat was chased by the dog.",
-        "isCorrect": true
+        "text": "Lenin",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "The dog is chasing the cat.",
+        "text": "Engels",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "The dog chased the cat.",
+        "text": "Stalin",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "The cat chases the dog.",
-        "isCorrect": false
+        "text": "Marx",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Identify the subjunctive verb: 'If I ___ you, I\u2019d leave.'",
+    "questionText": "Who wrote the Communist Manifesto?",
     "choices": [
       {
         "letter": "A",
-        "text": "were",
-        "isCorrect": true
+        "text": "Stalin",
+        "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "be",
-        "isCorrect": false
+        "text": "Marx",
+        "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "was",
+        "text": "Lenin",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "am",
+        "text": "Engels",
         "isCorrect": false
       }
     ]
@@ -5267,26 +5267,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is the past participle of 'write'?",
+    "questionText": "What was the Cold War?",
     "choices": [
       {
         "letter": "A",
-        "text": "Write",
+        "text": "A civil war",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Wrote",
+        "text": "A war fought in winter",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Written",
+        "text": "A conflict between USSR and USA",
         "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Writing",
+        "text": "A war between Korea and Japan",
         "isCorrect": false
       }
     ]
@@ -5294,26 +5294,26 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "What is the past participle of 'write'?",
+    "questionText": "Who led India to independence?",
     "choices": [
       {
         "letter": "A",
-        "text": "Write",
+        "text": "Bose",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "Wrote",
+        "text": "Patel",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "Written",
+        "text": "Gandhi",
         "isCorrect": true
       },
       {
         "letter": "D",
-        "text": "Writing",
+        "text": "Nehru",
         "isCorrect": false
       }
     ]
@@ -5321,53 +5321,53 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Identify the subjunctive verb: 'If I ___ you, I\u2019d leave.'",
+    "questionText": "Who wrote the Communist Manifesto?",
     "choices": [
       {
         "letter": "A",
-        "text": "am",
+        "text": "Lenin",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "were",
-        "isCorrect": true
+        "text": "Engels",
+        "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "be",
+        "text": "Stalin",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "was",
-        "isCorrect": false
+        "text": "Marx",
+        "isCorrect": true
       }
     ]
   },
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Which sentence is in passive voice?",
+    "questionText": "What was the Cold War?",
     "choices": [
       {
         "letter": "A",
-        "text": "The dog is chasing the cat.",
+        "text": "A war fought in winter",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "The cat was chased by the dog.",
+        "text": "A conflict between USSR and USA",
         "isCorrect": true
       },
       {
         "letter": "C",
-        "text": "The dog chased the cat.",
+        "text": "A civil war",
         "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "The cat chases the dog.",
+        "text": "A war between Korea and Japan",
         "isCorrect": false
       }
     ]
@@ -5375,27 +5375,27 @@
   {
     "level": 1,
     "difficulty": "Hard",
-    "questionText": "Identify the subjunctive verb: 'If I ___ you, I\u2019d leave.'",
+    "questionText": "What triggered WWI?",
     "choices": [
       {
         "letter": "A",
-        "text": "be",
+        "text": "Treaty of Versailles",
         "isCorrect": false
       },
       {
         "letter": "B",
-        "text": "was",
+        "text": "D-Day",
         "isCorrect": false
       },
       {
         "letter": "C",
-        "text": "were",
-        "isCorrect": true
+        "text": "Pearl Harbor",
+        "isCorrect": false
       },
       {
         "letter": "D",
-        "text": "am",
-        "isCorrect": false
+        "text": "Assassination of Archduke Ferdinand",
+        "isCorrect": true
       }
     ]
   }

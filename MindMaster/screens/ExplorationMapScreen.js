@@ -7,12 +7,12 @@ import { LinearGradient } from 'expo-linear-gradient';
 import AppText from '../components/AppText'; 
 
 const ALL_GAME_WORLDS_CONFIG = [
-    { id: 'English', name: 'English Isle', icon: '🇬🇧', totalLevels: 10, displayOrder: 1 },
-    { id: 'Mathematics', name: 'Numberia', icon: '➕', totalLevels: 10, displayOrder: 2 },
-    { id: 'Science', name: 'Cosmic Labs', icon: '🔬', totalLevels: 10, displayOrder: 3 },
-    { id: 'History', name: 'Ancient Ruins', icon: '🏛️', totalLevels: 10, displayOrder: 4 },
-    { id: 'Geography', name: 'Terra Explorer', icon: '🌍', totalLevels: 10, displayOrder: 5 },
-    { id: 'Physics', name: 'Force & Motion', icon: '⚛️', totalLevels: 10, displayOrder: 6 },
+    { id: 'English', name: 'English Isle', icon: '🇬🇧', totalLevels: 15, displayOrder: 1 },
+    { id: 'Mathematics', name: 'Numberia', icon: '➕', totalLevels: 15, displayOrder: 2 },
+    { id: 'Science', name: 'Cosmic Labs', icon: '🔬', totalLevels: 15, displayOrder: 3 },
+    { id: 'History', name: 'Ancient Ruins', icon: '🏛️', totalLevels: 15, displayOrder: 4 },
+    { id: 'Geography', name: 'Terra Explorer', icon: '🌍', totalLevels: 15, displayOrder: 5 },
+    { id: 'Physics', name: 'Force & Motion', icon: '⚛️', totalLevels: 15, displayOrder: 6 },
 ];
 
 const WorldNode = ({ themeId, displayName, icon, unlocked, onPress, isCompleted, dynamicStyle }) => (
@@ -175,6 +175,7 @@ const ExplorationMapScreen = () => {
       >
         {mapCanvasLayout && (
             <ScrollView 
+                showsVerticalScrollIndicator={false}
                 contentContainerStyle={styles.mapCanvasScrollViewContent} 
                 style={styles.mapScrollLayerItself}
             >
@@ -246,7 +247,7 @@ const styles = StyleSheet.create({
   groundElement: { position: 'absolute', bottom: 0, left: 0, right: 0, height: '15%', backgroundColor: '#2c3e50', zIndex: 3, borderTopWidth:2, borderTopColor:'#1e2b37'},
 
   header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingTop: 50, paddingBottom:10, paddingHorizontal: 15, position: 'absolute', top:0, left:0, right:0, zIndex: 20 },
-  backButton: { padding: 5, backgroundColor:'rgba(0,0,0,0.2)', borderRadius:5 },
+  backButton: { padding: 5, backgroundColor:'rgba(0,0,0,0)', borderRadius:5 },
   backButtonText: { color: '#FFFFFF', fontSize: 16, fontWeight: 'bold' },
   title: { fontSize: 24, fontWeight: 'bold', color: '#FFFFFF', fontFamily: 'Jockey One', textAlign:'center', flex:1 },
   
@@ -258,7 +259,7 @@ const styles = StyleSheet.create({
   centeredMessageContainer: { position:'absolute', top:'40%', left:'5%', right:'5%', alignItems:'center', zIndex: 6},
   centeredMessageText: { fontSize: 18, fontWeight: 'bold', color: '#FFF', textAlign:'center'},
   
-  worldNode: { width: 90, height: 90, borderRadius: 20, backgroundColor: 'rgba(74, 117, 196, 100)', justifyContent: 'center', alignItems: 'center', padding: 5, position: 'absolute', borderWidth: 1, borderColor: 'rgba(74, 117, 196, 100)', elevation: 5, shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 1.25, shadowRadius: 6 },
+  worldNode: { width: 90, height: 90, borderRadius: 20, backgroundColor: 'rgba(44, 127, 46, 100)', justifyContent: 'center', alignItems: 'center', padding: 5, position: 'absolute', borderWidth: 1, borderColor: 'rgba(44, 127, 46, 100)', elevation: 5, shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 1.25, shadowRadius: 6 },
   lockedWorldNode: { backgroundColor: 'rgba(96, 125, 139, 0.8)', borderColor: 'rgba(69, 90, 100, 0.95)' },
   completedWorldNode: { backgroundColor: 'rgba(76, 175, 80, 0.9)', borderColor: 'rgba(165, 214, 167, 0.95)' },
   worldIconContainer: { width: 35, height: 35, borderRadius: 17.5, backgroundColor: 'rgba(255,255,255,0.15)', justifyContent: 'center', alignItems: 'center', marginBottom: 4 },
@@ -270,7 +271,7 @@ const styles = StyleSheet.create({
   pathConnector: {
     position: 'absolute',
     height: 7, 
-    backgroundColor: 'rgba(189, 195, 199, 0.6)', 
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', 
     borderRadius: 3.5,
     // transformOrigin: 'left center', // Conceptually
   }
